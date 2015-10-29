@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+<script type="text/javascript" src="scripts/speedform.js"></script>
+<style type="text/css">
+	body {
+		font-family: "宋体", simhei, Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		line-height: 1.231;
+	}
+	
+	ul,li,p{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-family: "宋体";
+	}
+	
+	.fn-clear {zoom:1; /* for IE6 IE7 */}
+	.w970{width:970px;margin:0 auto;}
+	.spe-content{width:100%;background:#000;padding-bottom:50px;}
+	
+	.spe-kv{width:970px;overflow:hidden;}
+	.spe-kv-btns{width:970px;height:40px;background:url("images/speedform/line-through.gif") repeat-x 0 31px;}
+	.spe-kv-btns ul{width:950px;margin:0 auto;}
+	.spe-kv-btns ul li{float:left;display:inline;width:190px;height:40px;}
+	.spe-kv-btns ul li div{cursor:pointer;}
+	.spe-kv-btns ul li p{height:24px;overflow:hidden;line-height:24px;color:#4d4d4d;font-family:'黑体';font-size:12px;text-align:center;font-weight:700;}
+	.spe-kv-btns ul li i{display:block;width:18px;height:15px;margin:0 auto;overflow:hidden;text-indent:-99em;line-height:0;font-size:0;background:#808080 url("images/speedform/dot.png") no-repeat 0 0; cursor:pointer;}
+	
+	.spe-kv-btns ul li.sel p{color:#fff;}
+	.spe-kv-btns ul li.sel i{background-position:0 -15px;}
+	
+	.spe-kv-pic{position:relative;width:970px;overflow:hidden;background:#000;}
+	
+	.spe-kv-pic ul{width:970px;height:496px;}
+	.spe-kv-pic ul li{width:970px;height:496px;overflow:hidden;position:absolute;left:970px;top:0;background:#000;}
+	
+	.spe-kv-arrow{position:absolute;top:50%;margin:-28px 0 0 0;width:43px;height:56px;overflow:hidden;text-indent:-999em;cursor:pointer;}
+	.arrow-prev{left:0;background:url("images/speedform/arrow-prev.png") no-repeat;}
+	.arrow-next{right:0;background:url("images/speedform/arrow-next.png") no-repeat;}
+</style>
+
+</head>
+
+<body>
+<!--TOP-->
+<div class="spe-content">
+	<div class="w970">
+		
+		<div class="spe-kv">
+			<div class="spe-kv-btns">
+				<ul class="fn-clear">
+					<li class="sel"><div style="width:100px;margin:0 auto;"><p>设计灵感</p><i>dot</i></div></li>
+					<li class=""><div style="width:130px;margin:0 auto;"><p>无缝裁剪的后跟</p><i>dot</i></div></li>
+					<li class=""><div style="width:130px;margin:0 auto;"><p>超声波黏合科技</p><i>dot</i></div></li>
+					<li class=""><div style="width:130px;margin:0 auto;"><p>人体工程学塑模</p><i>dot</i></div></li>
+					<li class=""><div style="width:130px;margin:0 auto;"><p>中底/外底创新突破</p><i>dot</i></div></li>
+				</ul>
+			</div>
+			<div class="spe-kv-pic">
+				<ul class="fn-clear spe-kv-go">
+					<li style="left:0;" cur="cur"><img src="images/speedform/kv-1.jpg" width="970px" height="496px" alt="" title="" /></li>
+					<li><img src="images/speedform/kv-2.jpg" width="970px" height="496px" alt="" title="" /></li>
+					<li><img src="images/speedform/kv-3.jpg" width="970px" height="496px" alt="" title="" /></li>
+					<li><img src="images/speedform/kv-4.jpg" width="970px" height="496px" alt="" title="" /></li>
+					<li><img src="images/speedform/kv-5.jpg" width="970px" height="496px" alt="" title="" /></li>
+				</ul>
+				<span class="spe-kv-arrow arrow-prev">prev</span>
+				<span class="spe-kv-arrow arrow-next">next</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

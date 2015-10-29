@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/kv.js" type="text/javascript"></script>
+<title>nike kv效果</title>
+<style>
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-size: 12px;
+	color: #000;
+	line-height: 1.2;
+	background: #ffffff;
+	font-family: Helvetica Arial, sans-serif, "SimHei";
+}
+
+
+
+div,span,textarea,ul,li,dl,dt,dd,label,p,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,select
+	{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	line-height: 1.2;
+	word-wrap: break-word;
+	font-weight: normal;
+}
+
+
+img,input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.kv-big {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}	
+
+.mal-black {
+    background: none repeat scroll 0 0 #000000;
+    clear: both;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.mal-detail {
+    clear: both;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.scroll_large_img {
+    clear: both;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1600px;
+    min-width: 680px;
+    overflow: hidden;
+    width: 100%;
+}
+.scroll_large_img ul {
+    clear: both;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.scroll_large_img ul li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    height: 100%;
+    left: 1600px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.scroll_large_img ul li .kv-big {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: auto;
+    width: 100%;
+}
+.kvzoomer {
+	height: 32px;
+	position: absolute;
+	left: 48%;
+	top: 50%;
+	width: 32px;
+	z-index: 1;
+}
+.morenimg {
+	clear: both;
+	width: 100%;
+	max-width: 1600px;
+	min-width: 910px;
+	overflow: hidden;
+	margin: 0 auto;
+	z-index: 0;
+}
+
+.morenimg img {
+	width: 100%;
+	height: auto;
+}
+</style>
+</head>
+
+<body>
+    <div class="scroll_large_img" style="background:#000;">
+    	<div class="morenimg">
+         <img src="images/morentu.jpg" /> 
+        </div>
+	 
+		 <img src="images/loading.gif" class="kvzoomer"> 
+    	 <ul>
+	 		<li class="kv-color-con" style="left:0;">
+                <img class="kv-big" src="images/kd6-kv1.jpg" border="0" usemap="#kv"/>
+                <map name="kv" id="kv">
+                    <area shape="circle" coords="459,397,14" href="#nogo" class="mal-move" />
+                    <area shape="circle" coords="774,165,14" href="#nogo" class="mal-move" />
+                    <area shape="circle" coords="681,290,14" href="#nogo" class="mal-move" />
+                </map>
+                <div class="mal-black"></div>
+                <img src="images/kd6-1.png" class="mal-detail" style="left:231px; top:127px;width:228px; height:276px;"/>
+                <img src="images/kd6-2.png" class="mal-detail" style="left:798px; top:27px;width:228px; height:230px;"/>
+                <img src="images/kd6-3.png" class="mal-detail" style="left:696px; top:284px;width:228px; height:213px;"/>
+             </li>
+         </ul>
+     </div>
+</body>
+</html>

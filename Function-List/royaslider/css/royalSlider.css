@@ -1,0 +1,103 @@
+.rsDefault .rsArrow {
+    height: 100%;
+    width: 33px;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+}
+.rsDefault.rsVer .rsArrow {
+    width: 100%;
+    height: 40px;
+}
+.rsDefault.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+
+.rsDefault.rsHor .rsArrowLeft { left: 30px; top: 0; }
+.rsDefault.rsHor .rsArrowRight { right: 30px; top:0; }
+
+.rsDefault .rsArrowIcn {
+    width: 21px;
+    height: 69px;
+    top: 50%;
+    left: 0%;
+    margin-top: -34px;
+    margin-left: 0px;
+
+    position: absolute;
+    cursor: pointer;
+    background: url(../images/hp-arrows.png) no-repeat;
+    border-radius: 2px;
+}
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn:hover {
+    background-position: left top;
+}
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn:hover {
+    background-position: right top;
+}
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: left bottom; }
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: right bottom; }
+.rsDefault .rsArrowDisabled .rsArrowIcn { /*background-color: rgba(0,0,0,0.4);*/ opacity: .1; *display: none; }
+.rsSlide {
+    display: block;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.rsArrow, .rsNav, .rsThumbsArrow {
+    opacity: 1;
+    transition: opacity 0.3s linear 0s;
+}
+.rsHidden {
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s;
+    visibility: hidden;
+}
+.rsContainer {
+    position: relative;
+    width: 100%;
+}
+.look {
+    display: none;
+    float: left;
+    width: 100%;
+}
+.look .model {
+    cursor: pointer;
+    width: 100%;
+}
+.rsOverflow {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.royalSlider > * {
+    float: left;
+}
+.rsDefault .rsBullets {
+    bottom: 0;
+    height: auto;
+    left: 0;
+    line-height: 0;
+    margin: 0 0 14px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 0;
+}
+.rsDefault .rsBullet {
+    background: none repeat scroll 0 0 #666666;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 8px;
+    margin: 5px;
+    width: 8px;
+}
+.rsDefault .rsBullet.rsNavSelected {
+    background-color: #999999;
+}

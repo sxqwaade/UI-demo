@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>input</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix("");
+			</script>
+		<![endif]-->
+		<style type="text/css">
+			/* 上下 */
+			.norNum{width:55px;height:30px;margin:0 auto;border:1px solid #bdbdbd;border-right:0 none;}
+			.norNum input{float:left;display:inline;width:27px;height:28px;padding:1px 3px;line-height:28px;text-align:center;border:0 none;}
+			.opera{float:left;display:inline;width:22px;height:30px;}
+			.opera .plus,
+			.opera .minus{display:block;width:22px;height:15px;overflow:hidden;text-indent:-99em;cursor:pointer;}
+			.opera .plus{background:url("images/icon-plus.png") no-repeat;}
+			.opera .minus{background:url("images/icon-minus.png") no-repeat;}
+
+			/* 左右 */
+			.norNum1{width:100px;height:30px;margin:0 auto;}
+			.norNum1 input{float:left;display:inline;width:27px;height:26px;padding:1px 3px;line-height:26px;text-align:center;border:1px solid #d1d1d1;}
+			.plus1,
+			.minus1{float:left;display:inline;width:30px;height:30px;line-height:30px;overflow:hidden;cursor:pointer;text-align:center;font-size:14px;color:#000;}
+			.plus1{background:#eee;}
+			.minus1{background:#eee;}
+			/* 这是没用过的 */
+			body{font:500 12px/1.2 'microsoft yahei';}
+			h1{height:30px;line-height:30px;margin:0 0 20px 0;font-size:30px;text-align:center;}
+			h2{width:760px;margin:0 auto 30px;height:30px;line-height:30px;font-size:24px;}
+			blockquote{width:700px;margin:0 auto 20px;padding:30px;font-size:14px;background:#eee;color:#00a9ff}
+			p{margin:0 0 20px 0;color:#f00;}
+			b{color:#f00;font-weight:700;}
+			em{color:#000;font-weight:700;}
+			i{color:#ef07b9;font-weight:700;}
+		</style>
+	</head>
+	<body>
+		<div style="width:200px;margin:30px auto">
+			<h1>加减号输入框</h1>
+			<h2>上下</h2>
+			<div class="fn-clear norNum">
+				<input type="text" class="amount" value="1" style="text-align:center;">
+				<div class="opera"><a class="plus">+</a><a class="minus">-</a></div>
+			</div>
+			<h2>左右</h2>
+			<div class="fn-clear norNum1">
+				<a class="minus1">-</a><input type="text" class="amount" value="1" style="text-align:center;"><a class="plus1">+</a>
+			</div>
+		</div>
+		<h2 class="">html:</h2>
+		<blockquote>
+			<p>加减号 上下结构</p>
+			&lt;div class="norNum"&gt;<br />
+				&nbsp;&nbsp;&lt;input type="text" class="amount" value="1" style="text-align:center;" /&gt;<br />
+				&nbsp;&nbsp;&lt;div class="opera"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="plus"&gt;+&lt;/a&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="minus"&gt;-&lt;/a&gt;<br />
+				&nbsp;&nbsp;&lt;/div&gt;<br />
+			&lt;/div&gt;<br /><br />
+			<p>加减号 左右结构</p>
+			&lt;div class="norNum1"&gt;<br />
+				&nbsp;&nbsp;&lt;a class="minus1"&gt;-&lt;/a&gt;<br />
+				&nbsp;&nbsp;&lt;input type="text" class="amount" value="1" style="text-align:center;" /&gt;<br />
+				&nbsp;&nbsp;&lt;a class="plus1"&gt;+&lt;/a&gt;<br />
+			&lt;/div&gt;
+		</blockquote>
+		<h2>css:</h2>
+		<blockquote>
+			<p>加减号 上下结构</p>
+			.norNum{<br />
+			&nbsp;&nbsp;float:left;<br />
+			&nbsp;&nbsp;display:inline;<br />
+			&nbsp;&nbsp;width:55px;<br />
+			&nbsp;&nbsp;height:30px;<br />
+			&nbsp;&nbsp;margin:0 0 0 35px;<br />
+			&nbsp;&nbsp;border:1px solid #bdbdbd;<br />
+			&nbsp;&nbsp;border-right:0 none;<br />
+			}<br /><br />
+			.norNum input{<br />
+			&nbsp;&nbsp;float:left;<br />
+			&nbsp;&nbsp;display:inline;<br />
+			&nbsp;&nbsp;width:27px;<br />
+			&nbsp;&nbsp;height:28px;<br />
+			&nbsp;&nbsp;padding:1px 3px;<br />
+			&nbsp;&nbsp;line-height:28px;<br />
+			&nbsp;&nbsp;text-align:center;<br />
+			&nbsp;&nbsp;border:0 none;<br />
+			}<br /><br />
+			.opera{<br />
+			&nbsp;&nbsp;float:left;<br />
+			&nbsp;&nbsp;display:inline;<br />
+			&nbsp;&nbsp;width:22px;<br />
+			&nbsp;&nbsp;height:30px;<br />
+			}<br /><br />
+			.opera .plus,<br />
+			.opera .minus{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;display:block;<br />
+			&nbsp;&nbsp;width:22px;<br />
+			&nbsp;&nbsp;height:15px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;text-indent:-99em;<br />
+			&nbsp;&nbsp;cursor:pointer;<br />
+			}<br /><br />
+			.opera .plus{<br />
+			&nbsp;&nbsp;background:url("images/icon-plus.png") no-repeat;<br />
+			}<br /><br />
+			.opera .minus{<br />
+			&nbsp;&nbsp;background:url("images/icon-minus.png") no-repeat;<br />
+			}
+			<p>加减号 左右结构</p>
+			.norNum1{<br />
+			&nbsp;&nbsp;width:100px;<br />
+			&nbsp;&nbsp;height:30px;<br />
+			&nbsp;&nbsp;margin:0 auto;<br />
+			}<br /><br />
+			.norNum1 input{<br />
+			&nbsp;&nbsp;float:left;<br />
+			&nbsp;&nbsp;display:inline;<br />
+			&nbsp;&nbsp;width:27px;<br />
+			&nbsp;&nbsp;height:26px;<br />
+			&nbsp;&nbsp;padding:1px 3px;<br />
+			&nbsp;&nbsp;line-height:26px;<br />
+			&nbsp;&nbsp;text-align:center;<br />
+			&nbsp;&nbsp;border:1px solid #d1d1d1;<br />
+			}<br /><br />
+			.plus1,<br />
+			.minus1{<br />
+			&nbsp;&nbsp;float:left;<br />
+			&nbsp;&nbsp;display:inline;<br />
+			&nbsp;&nbsp;width:30px;<br />
+			&nbsp;&nbsp;height:30px;<br />
+			&nbsp;&nbsp;line-height:30px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;cursor:pointer;<br />
+			&nbsp;&nbsp;text-align:center;<br />
+			&nbsp;&nbsp;font-size:14px;<br />
+			&nbsp;&nbsp;color:#000;<br />
+			&nbsp;&nbsp;background:#eee;<br />
+			}<br /><br />
+		</blockquote>
+		<h2>javascript</h2>
+		<blockquote>
+			<p>1.输入的最大值 -- 代码中红色部分</p>
+			<p>2.屏蔽双击选中的方法 -- 代码中黑色部分</p>
+			<p>3.左右结构按钮 -- 代码中粉色部分删去</p>
+		var $j = jQuery.noConflict();<br />
+		$j(function(){<br />
+			&nbsp;&nbsp;var minus = $j(".minus");<br />
+		    &nbsp;&nbsp;var plus = $j(".plus");<br />
+		    &nbsp;&nbsp;minus.click(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<em>// 屏蔽双击选中</em><br />
+		    &nbsp;&nbsp;&nbsp;&nbsp;<em>$j(this).attr("onselectstart","return false").css("-moz-user-select","none");</em><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var nums = $j(this)<i>.parent()</i>.siblings(".amount");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;numsval = parseInt(nums.val());<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;if(numsval<=1){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numsval = numsval-1;  <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums.val(numsval);<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;});<br /><br />
+			&nbsp;&nbsp;plus.click(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<em>// 屏蔽双击选中</em><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<em>$j(this).attr("onselectstart","return false").css("-moz-user-select","none");</em><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var nums = $j(this)<i>.parent()</i>.siblings(".amount");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;numsval = parseInt(nums.val());<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;if(numsval>=<b>5</b>){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numsval = numsval+1;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums.val(numsval);<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;});<br /><br />
+			&nbsp;&nbsp;$j(".amount").each(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var nums = $j(this);<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;nums.focus(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(document).keyup(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var s = /^[0-9]*$/;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numsval = parseInt(nums.val());<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(numsval ><b>5</b>){nums.val(<b>5</b>);}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(numsval < 1 || numsval == "" ){nums.val(1);}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(! s.test(nums.val())){nums.val(1)}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums.keypress(function(event){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;event.returnValue=false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nums.focusout(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numsval = parseInt($j(this).val());<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = $j.trim($j(this).val()).length;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(numsval ><b>5</b>)nums.val(<b>5</b>);<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(numsval < 1 || numsval == "" || a <=0)nums.val(1); <br />  
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+			&nbsp;&nbsp;});<br />
+			})	
+		</blockquote>
+	</body>
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+		$j(function(){
+			// 上下
+			var minus = $j(".minus");
+		    var plus = $j(".plus");
+		    minus.click(function(){
+				// 屏蔽双击选中
+		    	$j(this).attr("onselectstart","return false").css("-moz-user-select","none");
+			    var nums = $j(this).parent().siblings(".amount");
+			    numsval = parseInt(nums.val());
+				if(numsval<=1){
+					return false;
+				}else{
+					numsval = numsval-1;  
+					nums.val(numsval);
+				}
+		    });
+			plus.click(function(){
+				// 屏蔽双击选中
+				$j(this).attr("onselectstart","return false").css("-moz-user-select","none");
+			    var nums = $j(this).parent().siblings(".amount");
+			    numsval = parseInt(nums.val());
+				if(numsval>=5){
+					return false;
+				}else{
+					numsval = numsval+1;
+					nums.val(numsval);
+			      }
+		    });
+		    $j(".amount").each(function(){
+				var nums = $j(this);
+				nums.focus(function(){
+					$j(document).keyup(function(){
+						var s = /^[0-9]*$/;
+						numsval = parseInt(nums.val());
+						if(numsval >5){nums.val(5);}
+						if(numsval < 1 || numsval == "" ){nums.val(1);}
+						if(! s.test(nums.val())){nums.val(1)}
+			        });
+			        nums.keypress(function(event){
+						if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+						event.returnValue=false;
+			        });
+			        nums.focusout(function(){
+						numsval = parseInt($j(this).val());
+						a = $j.trim($j(this).val()).length
+						if(numsval >5)nums.val(5);
+						if(numsval < 1 || numsval == "" || a <=0)nums.val(1);   
+					});
+				});
+		    });
+
+		    // 左右
+			var minus1 = $j(".minus1");
+		    var plus1 = $j(".plus1");
+		    minus1.click(function(){
+				// 屏蔽双击选中
+		    	$j(this).attr("onselectstart","return false").css("-moz-user-select","none");
+			    var nums = $j(this).siblings(".amount");
+			    numsval = parseInt(nums.val());
+				if(numsval<=1){
+					return false;
+				}else{
+					numsval = numsval-1;  
+					nums.val(numsval);
+				}
+		    });
+			plus1.click(function(){
+				// 屏蔽双击选中
+				$j(this).attr("onselectstart","return false").css("-moz-user-select","none");
+			    var nums = $j(this).siblings(".amount");
+			    numsval = parseInt(nums.val());
+				if(numsval>=5){
+					return false;
+				}else{
+					numsval = numsval+1;
+					nums.val(numsval);
+			      }
+		    });
+		    $j(".amount").each(function(){
+				var nums = $j(this);
+				nums.focus(function(){
+					$j(document).keyup(function(){
+						var s = /^[0-9]*$/;
+						numsval = parseInt(nums.val());
+						if(numsval >5){nums.val(5);}
+						if(numsval < 1 || numsval == "" ){nums.val(1);}
+						if(! s.test(nums.val())){nums.val(1)}
+			        });
+			        nums.keypress(function(event){
+						if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+						event.returnValue=false;
+			        });
+			        nums.focusout(function(){
+						numsval = parseInt($j(this).val());
+						a = $j.trim($j(this).val()).length
+						if(numsval >5)nums.val(5);
+						if(numsval < 1 || numsval == "" || a <=0)nums.val(1);   
+					});
+				});
+		    });
+		})
+	</script>
+</html>	

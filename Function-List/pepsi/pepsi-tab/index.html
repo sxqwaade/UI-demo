@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/pepsi.css" rel="stylesheet" type="text/css" />
+	<link href="css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="scripts/perfect-scrollbar.js"></script>
+	<script>
+	$(function(){
+		$(".cool-href-pes").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+		});
+		// 弹出新手教程
+		$("#serviceonline").click(function(){
+			$(".g_rightbar_jc").my_overlay();
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach").show();
+		});
+		// 第一步 点击 下一步
+		$(".next01").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach02").show();
+		});
+		// 第二步 点击 下一步
+		$(".next02").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach03").show();
+		});
+		// 第二步 点击 上一步
+		$(".pre02").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach").show();
+		});
+		// 第三步 点击 上一步
+		$(".pre03").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach02").show();
+		});
+		// 点击积分规则
+		$(".cool-href-jf,.cool-href-jf02,.cool-href-jf01").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-jf").show();
+		});
+		// 点击活动规则
+		$(".cool-href-hd,.cool-href-hd02,.cool-href-hd01").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-hd").show();
+		});
+		// 新手教程
+		$(".cool-href-teach").click(function(){
+			$(".g_rightbar_jc").children("div").hide();
+			$(".cool-teach").show();
+		});
+		//文字层滚动效果
+		$('#g_xj_hdgz').perfectScrollbar({
+	        wheelSpeed: 20,
+	        wheelPropagation: false
+	      });
+		$('#g_xj_jfgz').perfectScrollbar({
+	        wheelSpeed: 20,
+	        wheelPropagation: false
+	      });
+	});
+
+(function($) {
+	// 公用弹出层函数
+	$.fn.my_overlay = function(options) {
+		var defaults = {
+			mask: {
+				color: '#333',
+				loadSpeed: 200,
+				opacity: 0.6
+			},
+			top:'center',
+			left:'center',
+			closeOnClick: false,
+			closeOnEsc:false
+		}
+		var options = $.extend(defaults, options);
+		
+		$(this).overlay(options);
+		$(this).overlay().load();
+	}
+	
+})(jQuery);
+</script>
+</head>
+<body>
+	<div id="serviceonline" class="floatlink">
+		<div class="floatlink-wrap">
+	    	<span>
+	    		您目前积分:
+	    	</span>
+		</div>
+	</div>
+	<div style="display:none;" class="g_rightbar_jc">
+	<!-- 第一步 -->
+	<div class="cool-teach">
+		<div class="cool-href-jf"></div>
+		<div class="cool-href-hd"></div>
+		<div class="cool-href-next next01"></div>
+		<a class="cool-teach-close close" href="javascript:;" title="关闭"></a>
+	</div>
+	<!-- 第二步 -->
+	<div class="cool-teach02">
+		<div class="cool-href-jf"></div>
+		<div class="cool-href-hd"></div>
+		<div class="cool-href-next02 next02"></div>
+		<div class="cool-href-last02 pre02"></div>
+		<a class="cool-teach-close close" href="javascript:;" title="关闭"></a>
+	</div>
+	<!-- 第三步 -->
+	<div class="cool-teach03">
+		<div class="cool-href-jf"></div>
+		<div class="cool-href-hd"></div>
+		<div class="cool-href-last03 pre03"></div>
+		<div class="cool-href-pes close"></div>
+		<a class="cool-teach-close close" href="javascript:;" title="关闭"></a>
+	</div>
+	<!-- 积分规则 -->
+	<div class="cool-jf">
+		<div class="cool-href-teach"></div>
+		<div class="cool-href-hd01"></div>
+		<div class="cool-jf-rule" id="g_xj_jfgz">
+			<div class="cool-rule-jf-main">
+				<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:21px;font-family:&#39;微软雅黑&#39;">积分机制</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分累积：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">用户须使用淘宝/天猫帐号（“账号”）登录百事天猫网站（网址：</span><a href="http://www.pepsitmall.com/"><span style="color: rgb(0, 255, 122);font-size: 13px;font-family: 微软雅黑">http://www.pepsitmall.com/</span></a><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">，以下简称“百事天猫”），并进行下列操作，即可获得相应百事天猫NOW积分（“积分”）：</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1．用户首次同意授权百事天猫可一次性获得100个积分;</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;用户首次登陆百事天猫可一次性获得100个积分;</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.&nbsp;用户每日首次登陆百事天猫可获得5个积分;</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4.&nbsp;参与下列线上活动（下列线上活动的规则详见“活动规则”），完成A至</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">D</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">操作，即可获得相应积分：</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">【活动一</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">】</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">爱#就现在#&nbsp;COOL品免费抢！</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动二</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀#就现在#晒出你的COOL照！</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动三</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀#就现在#晒出你的复古潮流</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">COOL</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">范儿</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动四</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">#</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">就现在</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">#C</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">OOL&nbsp;</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">G</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">UY逆袭复活赛</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">【活动五</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">】</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">爱#就现在#七夕&nbsp;COOL品秒杀</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">A</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">.&nbsp;上传作品：每次可获得50个积分，每个账号每天能上传10则作品，但只有前2次上传可获得相应积分，且每次均需上传不同作品；</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">B</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">.&nbsp;”赞”他人作品：每次可获得1个积分</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">,&nbsp;<span style="font-family:PMingLiU">每天最多</span></span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">赞</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">作品</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3<span style="font-family:PMingLiU">次</span><span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">同一</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">件</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">作品每天</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">只能</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">赞</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">1<span style="font-family:PMingLiU">次</span></span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">C</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">.&nbsp;分享作品、活动及活动五中相关活动内容至新浪微博：每次分享可获得5个积分，每个账号分享数不设上限，但每天仅前5次分享可获得相应积分,&nbsp;且每次均需分享不同作品或内容；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">D</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">.</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">C</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">OOL&nbsp;</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">G</span><span style=";color:rgb(255, 255, 255);font-size:14px;font-family:&#39;微软雅黑&#39;">UY逆袭复活赛及</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">复古潮流</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">COOL</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">照</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">投票：每次可获得1个积分，每个账号每天针对同一参赛选手或同一复古潮流</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">COOL</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">照只</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">有一次投票机会，每天共有3次投票机会。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">积分查询:</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;用户可在登陆并同意授权百事天猫的状态下，通过点击百事天猫页面顶部导航栏上的“个人中心”查看个人积分及兑换记录；</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;用户在登陆并同意授权百事天猫的状态下，百事天猫页面右边的浮标会显示该用户当前的累积积分。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">积分兑换:</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;除通过参与活动一中“砸碎冰块”获得的兑换机会只能兑换冰块中的礼品外，其他积分累积至礼品兑换所需的积分数量时，用户均可兑换百事天猫上展示的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">对应礼品</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">（“礼品”）。礼品将每周限时限量更新，所有礼品兑完即止,&nbsp;更多可积分兑换的礼品详情请见“百事潮品”页面；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;同一用户最多只能兑换5件同款礼品（含一个用户切换多个账号兑换同款礼品）；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.积分兑换的礼品需在兑换成功之日起的</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">个工作日内联系旺旺客服（通过点击百事天猫页面下方“和我联系”图标）拍下相关运费链接并支付相应运费。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">备注说明：</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分的兑换起始日期为2013年8月9日至2013年8月30日，积分过期若尚未使用完毕，将自动失效；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">用户使用有效积分兑换礼品成功后，请在3个工作日内与旺旺客服（通过点击百事天猫页面下方“和我联系”图标）取得联系，该用户须通过旺旺客服提供的链接支付相关礼品快递费用之后活动组织者才能将礼品寄出；如不予支付快递费用则视为自动放弃获得相应礼品；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">礼品图片仅供参考，以实物为准，且不可兑换为现金；</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4.</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">礼品尺寸和颜色均随机发放，请以收到的实物为准；</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">5.&nbsp;活动组织者包括活动主办方百事（中国）有限公司及活动协办方宝尊电子商务有限公司。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+			</div>
+  		</div>
+		<a class="cool-gz-close close" href="javascript:;" title="关闭"></a>
+	</div>
+	<!-- 活动规则 -->
+	<div class="cool-hd">
+		<div class="cool-href-teach"></div>
+		<div class="cool-href-jf01"></div>
+		<div class="cool-jf-rule" id="g_xj_hdgz">
+			<div class="cool-rule-jf-main">
+<p>
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动主题：</span>
+</p>
+<p style="text-indent:28px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">#就现在#玩COOL三重奏&nbsp;—&nbsp;抢COOL品</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">•</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀COOL范儿</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">•</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">享COOL乐</span>
+</p>
+<p>
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动简介：</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">延续鼓励年轻人勇敢去做大胆尝试的“渴望就现在”的精神,&nbsp;百事再度邀请年轻人即刻释放自己的个性,&nbsp;跟随百事立即行动</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">抢COOL品</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">•</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀COOL范儿</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">•</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">享COOL乐</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">—&nbsp;一揽自己</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">喜爱</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">的当下潮品！释放自己的潮流品味！听自己喜欢的HOT音乐！&nbsp;#就现在#绝对COOL势难当！</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动参与方式及具体内容：</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动一</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">爱#就现在#&nbsp;COOL品免费抢！</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">时间</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">201</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">9</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日至2013年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">0</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日23：59分止</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与方式</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">于百事天猫网站(http://www.pepsitmall.com，“百事天猫”)首页(“首页”)指定活动版块砸碎冰块</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">即可以积分兑换冰块中的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL品,&nbsp;赢得COOL品后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">至新浪微博</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;还可</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">另外</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">赢取</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">步骤</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">使用淘宝</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">/天猫帐号登录并同意授权百事天猫&nbsp;&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">用</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">鼠标点击首页”抢COOL品”版块陈列</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">的冰块内的商品；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击弹框显示的”确认”按钮兑换该COOL品,&nbsp;系统将自动扣除</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">所需</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">且成功分享</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动至新</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">浪微博后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">还可另外</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">获得相应积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">（积分的获得请参见”积分规则”）。</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动二</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀#就现在#晒出你的COOL照！</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">时间</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">201</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">9</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日至2013年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">0</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日23：59分止</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与方式:</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">于百事天猫网站首页指定活动版块上传COOL照,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">赞</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">或分享他人COOL照,</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">赢取相应积分,</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">即可兑换百事天猫平台上的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">丰富潮流好礼。</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与步骤</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">使用淘宝/天猫帐号登录并同意授权百事天猫；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在首页”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL范儿”版块参与:</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">上传</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在首页活动版块上传图片</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">即COOL照</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">并撰写你的COOL范儿态度(文字内容)</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击”发布”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">提交作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">提交成功后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,还</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">可</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">将作品分享至新浪微博获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">分享他人</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在首页</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动版块</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享其他参与者的作品至新浪微博</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">同时可加入评论</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享成功后可获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">（积分详情请参见”积分规则”）。</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">“赞”</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">其他参与者</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">作品下方手指标记以表达</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">支持</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">可获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分。</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动三</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀#就现在#晒出你的复古潮流</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">COOL</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">范儿</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">时间</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2013年8月9日至2013年8月3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">0日</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">23：59分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">止</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与方式</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">于百事天猫网站百事潮品页指定活动版块上传</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">复古潮流</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL照</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">、为他人作品投票、分享他人作品赢取相应积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;即可</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">兑换百事天猫平台上的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">丰富潮流好礼。活动组织者</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">将根据投票最多的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">前</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">10</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">件作品中</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">选择最符合活动主题的3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">个作品作为获奖作品，并对获奖作品的用户</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">给予</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖品</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖励</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。每个获奖用户需使用独立ID，同一用户只能获得一个奖励。</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与步骤</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">使用淘宝</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">/天猫</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">帐号登录并同意授权百事天猫；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">百事潮品页</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">晒出你的复古潮流</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL范儿</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">版块参与</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">:</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">上传作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击版块</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">中</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”晒#就现在#”按钮</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在弹框</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">中</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">上传图片并撰写你的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">复古</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">潮流</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL范儿</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">宣言</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">(文字内容)</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击”晒#就现在#”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">提交作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">提交成功后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;可将作品分享至新浪微博获得积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。积分详情见”积分规则”</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">分享他人</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">作品</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在百</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">事潮品页或查看所有复古单品页面点击其他参与者作品,&nbsp;查看作品详情</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享其他参与者的作品至新浪微博</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">同时可加入评论</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享成功后可获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">为作品投票</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击作品中手指标记</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;可为作品投票</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">投票成功后可获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;PMingLiU&#39;">奖品细则</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 138px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">获奖资格<span style="font-family:微软雅黑">:&nbsp;</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">活动组织者</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">将在作品投票数前<span style="font-family:微软雅黑">10</span><span style="font-family:PMingLiU">名独立</span><span style="font-family:微软雅黑">ID</span><span style="font-family:PMingLiU">作品中挑选最符合活动主题的</span><span style="font-family:微软雅黑">3</span><span style="font-family:PMingLiU">件独立</span><span style="font-family:微软雅黑">ID</span><span style="font-family:PMingLiU">作品作为获奖作品</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">。奖品如下：</span>
+</p>
+<p style="margin-left:138px">
+    <span style=";font-size:14px;font-family:&#39;宋体&#39;">第一名奖品：百事</span><span style=";font-size:14px;font-family:&#39;Calibri&#39;">AAPE&nbsp;&nbsp;T</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">恤<span style="font-family:Calibri">1</span><span style="font-family:宋体">件</span></span><span style=";font-size:14px;font-family:&#39;Calibri&#39;">&nbsp;&nbsp;</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">&nbsp;价值：￥<span style="font-family:Calibri">499</span><span style="font-family:宋体">元</span></span>
+</p>
+<p style="margin-left:138px">
+    <span style=";font-size:14px;font-family:&#39;Calibri&#39;"><br/></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">第二名奖品：百事潮<span style="font-family:Calibri">T</span><span style="font-family:宋体">复古系列怀旧灰</span><span style="font-family:Calibri">1</span><span style="font-family:宋体">件&nbsp;&nbsp;&nbsp;价值：￥</span><span style="font-family:Calibri">199</span><span style="font-family:宋体">元</span></span>
+</p>
+<p style="margin-left:138px">
+    <span style=";font-size:14px;font-family:&#39;宋体&#39;">第三名奖品：百事潮<span style="font-family:Calibri">T</span><span style="font-family:宋体">复古系列清新白&nbsp;</span><span style="font-family:Calibri">1</span><span style="font-family:宋体">件&nbsp;&nbsp;价值：￥</span><span style="font-family:Calibri">199</span><span style="font-family:宋体">元</span></span>
+</p>
+<p style="margin-left: 138px;margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-left: 138px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;宋体&#39;">奖品</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">发放形式</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 162px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">获奖名单将于活动结束后的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">10</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">个工作日内在百事天猫网站上公布</span>
+</p>
+<p style="margin-left: 162px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">活动组织者</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">将在名单公布后的<span style="font-family:微软雅黑">10</span><span style="font-family:PMingLiU">个工作日内</span><span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">通过</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">百事</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">天猫</span><span style=";font-size:14px;font-family:&#39;宋体&#39;">旺旺</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">客服与获奖者取得联系<span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">在获得获奖者准确及完整的个人信息的</span><span style="font-family:微软雅黑">10</span><span style="font-family:PMingLiU">个工作日内将相应奖品以快递形式发放给获奖者</span><span style="font-family:微软雅黑">(</span><span style="font-family:PMingLiU">快递费由</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">获奖者</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">自行承担<span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">货到付款</span><span style="font-family:微软雅黑">)</span></span>
+</p>
+<p style="margin-left: 162px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">获奖者需提交包括但不限于真实姓名<span style="font-family:微软雅黑">,&nbsp;</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">地址，</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">手机号码<span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">身</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">份</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">证号码等个人信息<span style="font-family:微软雅黑">,&nbsp;</span><span style="font-family:PMingLiU">如果未能在规定时间内提供</span></span><span style=";font-size:14px;font-family:&#39;宋体&#39;">前述</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">信息，</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">将视为自动放弃奖品</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">【</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动四</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">】</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秀</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">#</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">就现在</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">#C</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">OOL&nbsp;</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">G</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">UY逆袭复活赛</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">时间</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">201</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">3</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">9</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日至2013年</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">8</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">月</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">16</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日23：59分止</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style="font-size:14px;font-family:&#39;微软雅黑&#39;">参与方式:&nbsp;参与者于百事天猫页面报名参与COOL&nbsp;GUY线上选拔&nbsp;(详情请参阅《逆袭复活赛活动规范》)</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">为已报名的参与者投票</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">以赢取相应积分</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">兑换百事天猫平台上的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">丰富潮流好礼。</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与步骤:&nbsp;</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">使用淘宝/天猫帐号登录并同意授权百事天猫；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;COOL&nbsp;G</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">UY</span><span style="font-size:14px;font-family:&#39;微软雅黑&#39;">活动</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">页</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与:</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">报名</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">#就现在#报名</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">开启报名表弹框</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">填写完成报名表后,&nbsp;点击”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">同意</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”提交审核</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">报名后四个工作日</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参赛选手</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">可</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自行</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">至活动页面查询得票数</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">投票</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击参赛选手</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">照片</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">下方心型标记</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">可为</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">该用户</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">投票</span>
+</p>
+<p style="margin-left: 160px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">投票成功后可获得</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">相应</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">【活动五】爱</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">#就</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">现在</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">#</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">七夕</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;COOL品秒杀</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">时间</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">自</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2013年8月13</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">日</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">10</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">00</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">时至</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">16</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">00之整点,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">共</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">开放7次秒杀</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与方式</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">在</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动期间,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">登入百</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">事天猫</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">首页活动版块</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秒杀</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秒杀成功</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">后可以</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">0</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">积分兑换冰块中的</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL品</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">。</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">每小时开放7件产品，秒完为止。</span>
+</p>
+<p style="margin-left: 80px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">参与步骤</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">使用淘宝</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">/天猫</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">帐号登录并同意授权百事天猫</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">用鼠标点击首页</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”七夕COOL品秒杀”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">版块所陈列的商品；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">秒杀成功</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">后</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">确认</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">按钮</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">赢取</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">该</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">COOL品</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">；</span>
+</p>
+<p style="margin-left: 136px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4.&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">点击</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">分享</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">”</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">后</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">成功分享活动至新浪微博后</span><span style=";font-size:14px;font-family:&#39;PMingLiU&#39;">,&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">可获得相应积分。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">注意事项</span><span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">:&nbsp;</span>
+</p>
+<p style="margin-left: 112px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.活动当日，由于活动奖品数量有限，</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">每位用户只能领取一件秒杀活动奖品。</span>
+</p>
+<p style="margin-left: 112px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.活动</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖品中的衣服和鞋子尺码随机发放。</span>
+</p>
+<p style="margin-left: 112px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.奖品不包含发票·。</span>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <br/>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动参与条件及限制:&nbsp;</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1.参与者条件：无职业、性别限制，具有完全民事行为能力的拥有淘宝/天猫帐号的活动参与者均可参加（限制民事行为能力人需征得其法定监护人的同意方可参加），部分操作内容需要参与者拥有新浪微博账号；</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2.&nbsp;活动参与者皆需使用淘宝/天猫帐号登录，并同意授权百事淘宝(</span><a href="http://www.pepsitmall.com/" style="font-size: 14px; font-family: 宋体; color: rgb(0, 176, 240); text-decoration: underline;"><span style="font-size: 14px; font-family: 宋体; color: rgb(0, 176, 240);">http://www.pepsitmall.com/</span></a><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">)；</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3.&nbsp;活动期间每天每个淘宝/天猫帐号最多可上传10个COOL照、复古潮流COOL照、照片、图片、文字或相应组合等资料（“作品”）,&nbsp;但只有前2个作品可获得积分，且每次均需上传不同作品；</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4.&nbsp;活动期间每天每个淘宝/天猫帐号最多“赞”作品3次，且同一件作品只能“赞”一次。</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">5.&nbsp;活动期间每个淘宝/天猫帐号分享数不设上限，但每天仅前5次分享可获得积分,&nbsp;且每次均需分享不同作品或</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">内容</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">；</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">6.&nbsp;活动期间每天每个淘宝/天猫帐号总计有3次投票机会,&nbsp;且对同一位选手或同一复古潮流COOL照仅可投票1次；</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">7.&nbsp;活动期间每个淘宝/天猫帐号仅可报名参赛1次。</span>
+</p>
+<p>
+    <br/>
+</p>
+<p style="margin-bottom: 0;margin-top: 0">
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动礼品：</span>
+</p>
+<p style="margin-left: 28px;margin-bottom: 0;margin-top: 0">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与者通过参与活动可获得相应积分，累积达到相应礼品要求的积分数量后，可兑换相应礼品。积分累计及礼品兑换内容详见“积分机制”。</span>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <span style=";font-weight:bold;font-size:14px;font-family:&#39;微软雅黑&#39;">活动上传之作品及参与者要求：</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">作品要求：</span>
+</p>
+<p style="margin-left:56px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与者上传的作品内容必须符合国家法律规定，不得有色情和污秽的内容传播，如作品无法契合活动主题将被视为无效或者由活动组织者进行审核之后删除。</span>
+</p>
+<p>
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与者要求：</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与者必须确保作品在提交时参与者本人必须拥有全部完整的权利，包括但不限于完整的肖像权和完整版权。若作品存在任何权利瑕疵，本次活动组织者可在任何时候终止您参与本次活动的资格，您应当承担由此所产生的一切损失或责任，包括但不限于，由于作品侵害任何第三方的权利而导致的索赔以及由此给本次活动组织者及其关联公司所产生的损失。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与者不可撤销地同意本次活动组织者</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">对其提交的作品在使用于本活动相关事项方面自动独家享有永久性的无偿使用权，该权利包括但不限于作品的著作权及其邻近权、其它知识产权、以及所有的相关商业使用权及开发权。参与者在此不可撤销地特别授权并同意：本次活动组织者有权以其认为合适的方式在网站或其他载体使用提交作品知识产权（包括但不限于公众传播、复制、摘编、表演、播放、展览、发行、摄制电影、电视、录像制品、录制录音制品、制作数字化制品、翻译、注释、编辑、出版、改编、修改的权利）、供本活动各阶段宣传海报使用以及在百事相关产品设计、产品包装与宣传广告、消费者活动等宣传印刷物、第三方出版印刷物、其它媒体或电子媒介广告宣传等事项使用（包括改编、修改等）并可与其它作品联合使用，无需向作者支付任何性质的费用或报酬、补偿等。</span>
+</p>
+<p>
+    <br/>
+</p>
+<p style="margin-left:28px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">其他补充说明</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">1)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动组织者包括活动主办方百事（中国）有限公司及协办方宝尊电子商务有限公司。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">2)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动组织者、活动各合作方的员工及其家属不可参加此次活动。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">3)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动参与者同意并遵守本活动网站上的所有活动相关规则，包括但不限于注册协议、官方使用条款及隐私条款并履行相应的义务。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">4)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">天猫/淘宝用户可以直接登录活动平台参加活动，没有天猫/淘宝账号的参与者需要注册成为天猫/淘宝用户后才能参加本次活动。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">5)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">本活动的活动范围为中国大陆地区（不包括港澳台地区），且活动参与对象仅限中国境内用户，大陆以外地区不设奖励。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">6)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">本活动主题涉及的各类活动中的参与行为须合法健康，不涉及反动、色情、暴力、低俗以及有违本次活动主题的内容、不侵犯任何第三方合法权益。一经发现违反规定，活动组织者有权立即取消其参与资格，并要求其承担相关法律责任。参与者应就参与行为、言论等独立承担责任，其任何行为及言论不代表活动组织者立场或意见，或构成活动组织者行为。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">7)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">本活动严禁参与者刷票，注册小号等破坏活动秩序的行为，一经发现有参与者在活动中使用任何不正当的手段参加活动，活动组织者有权立即取消其参与资格。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">8)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">参与本活动的参与者须基于活动平台（http://www.pepsitmall.com）上传、发布、评论、转发作品。如未通过本平台参与上传、发布、评论、转发作品，活动组织者将不予认可其参与本活动的资格。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">9)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">活动组织者不对因网络传输原因而导致参加者信息错误或延误承担任何责任。&nbsp;</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">10)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">如遇不可抗力因素，活动组织者拥有取消本次活动的权利。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">11)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖品及礼品个人所得税（如有）由参与者承担，并由活动组织者依法安排代扣代缴。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">12)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖品及礼品以实物为准，不可兑换成现金，各奖品及礼品的规格、质量、外观、使用规则及后续服务适用奖品及礼品生产商的标准并由该生产商负责。奖品及礼品不设退、换服务，有关奖品及礼品如遇质量问题，参与者应与奖品及礼品生产商或其指定的经销商联系，按照其正常的退换货和维修规则办理相关事宜，活动组织者不承担任何责任。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">13)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">如因参与者提供的个人信息不全或有误（包括姓名、电话和地址），导致奖品及礼品无法送达的任何情形，视为参与者自动放弃奖品及礼品，活动组织者对此不承担责任。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">14)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">奖品及礼品送达时间根据参与者所在地而有不同，因奖品或礼品运送公司原因造成的奖品及礼品递送延迟、毁损等情形，活动组织者对此不负责任。</span>
+</p>
+<p style="margin-left:80px">
+    <span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">15)&nbsp;</span><span style=";font-size:14px;font-family:&#39;微软雅黑&#39;">非由活动组织者故意或重大过失造成参与者在使用奖品及礼品过程中所发生的事故，活动组织者无须承担责任。</span>
+</p>
+<p style="margin-left:80px">
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+			</div>
+  		</div>
+		<a class="cool-gz-close close" href="javascript:;" title="关闭"></a>
+	</div>
+</div>
+</body>
+</html>

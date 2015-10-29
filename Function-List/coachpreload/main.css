@@ -1,0 +1,50 @@
+/*loadingbar*/
+@keyframes myfirst{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(-3000deg);}
+}
+@-webkit-keyframes myfirst{
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(-3000deg);}
+}
+@-o-keyframes myfirst{
+	from {-o-transform: rotate(0deg);}
+	to {-o-transform: rotate(-3000deg);}
+}
+@-moz-keyframes myfirst{
+	from {-moz-transform: rotate(0deg);}
+	to {-moz-transform: rotate(-3000deg);}
+}
+
+.preloaderWrapper{
+	width:140px;
+	height:84px;
+	position:absolute;
+	z-index:999;
+}
+#frontwheel{
+	position: absolute; 
+	left: 70px; 
+	top: 46px; 
+	width: 19px; 
+	height: 19px; 
+}
+#backwheel{
+	height: 24px;
+    left: 113px;
+    position: absolute;
+    top: 42px;
+    width: 24px;
+}
+#loadingdot{
+	position:absolute;
+	top:70px;
+	widows:140px;
+	height:14px;
+}
+.wheel{
+	-moz-animation:myfirst 50s;
+	-webkit-animation:myfirst 50s;
+	-0-animation:myfirst 50s;
+	animation:myfirst 50s;
+}

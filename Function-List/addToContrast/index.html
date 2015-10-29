@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>addToContrast</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.tinyscrollbar.min.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix(".fix-png");
+			</script>
+		<![endif]-->
+		<style type="text/css">
+		/* 这是没用过的 */
+			body{font:500 12px/1.2 'microsoft yahei';}
+			h1{height:30px;line-height:30px;margin:20px 0 20px 0;font-size:30px;text-align:center;}
+			h2{width:910px;margin:0 auto 30px;height:30px;line-height:30px;font-size:24px;}
+			blockquote{width:850px;margin:0 auto 20px;padding:30px;font-size:14px;background:#eee;color:#00a9ff}
+			p{margin:0 0 20px 0;color:#f00;}
+			b{color:#f00;font-weight:700;}
+			em{color:#000;font-weight:700;}
+			i{color:#ef07b9;font-weight:700;}
+			.w940{width:940px;margin:20px auto;}
+		
+		/*  */
+			.cate-list-fall{width:940px;overflow:hidden;padding:30px 0;border-top:1px solid #b9b9b9;border-bottom:1px solid #b9b9b9;}
+			.cate-list-fall ul{width:980px;overflow:hidden;}
+			.cate-list-fall ul .item-list{display:inline-block;*display:inline;*zoom:1;float:none;width:300px;margin:0 20px 30px 0;vertical-align:top;}
+			.cate-list-fall .col-name{line-height:35px;}
+			.cate-list-fall .col-price1{font-size:35px;}			
+			.product-comparison{width:300px;height:40px;overflow:hidden;margin:10px 0 0 0;line-height:40px;}
+			.product-comparison a{display:block;padding:0 0 0 45px;font-size:14px;text-decoration:underline;background:#faf9f6 url("images/comparison-btn.png") no-repeat 10px 0;}
+			.product-comparison a.checked{color:#fff;background-position:10px bottom;background-color:#008cd3;}
+			.comparison-box{margin:65px auto 0;}
+			.comparison-title{line-height:40px;font-size:30px;color:#414141;}
+			.comparison-list{width:900px;overflow:hidden;margin:10px 0 0 0;padding:30px 20px;background:#e4e4e4;}
+			.comparison-list ul{width:930px;}
+			.comparison-list ul li{position:relative;width:190px;padding:9px;min-height:250px;height:auto!important;_height:250px;margin:0 20px 0 0;background:#f1f1f1;border:1px solid #d8d8d8}
+			.comparison-list ul li.lcom{background:#fff;}
+			.c_pic{width:190px;height:190px;overflow:hidden;}
+			.c_name{width:190px;line-height:24px;margin:15px 0 0 0;font-size:19px;color:#2399d7;text-align:center;}
+			.c_del{display:block;position:absolute;top:5px;right:5px;width:18px;height:18px;overflow:hidden;text-indent:-99em;background:url("images/icon-del.png") no-repeat;}
+			.comparison-btn{display:block;width:120px;height:40px;overflow:hidden;margin:15px auto 0;line-height:40px;font-size:14px;color:#fff;text-align:center;background:#008cd3;}
+			.comparison-box .uncom{background:#999;cursor:;}
+		</style>
+	</head>
+	<body>
+		<h1>添加对比</h1>
+		<div class="w940">
+			<div class="cate-list-fall">
+				<ul>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories1.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories1.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories2.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories2.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories4.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories4.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories3.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories3.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories2.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories2.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+					<li class="item-list">
+						<div class="col-pic">
+							<a href="javascript:;" title="Surface 尼龙外胆包  ">
+								<img src="images/surface-accessories4.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " data-comparison="images/surface-accessories4.jpg" />
+							</a>
+						</div>
+						<div class="product-comparison">
+							<a class="fix-png" href="javascript:;">与其他型号进行对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="comparison-box">
+				<h2 class="comparison-title">对比4个项目</h2>
+				<div class="comparison-list">
+					<ul class="fn-clear">
+						<li class="fn-left"></li>
+						<li class="fn-left"></li>
+						<li class="fn-left"></li>
+						<li class="fn-left"></li>
+					</ul>
+					<a class="uncom comparison-btn" href="javascript:;">开始对比</a>
+				</div>
+			</div>
+		</div>
+		<h2>html</h2>
+		<blockquote>
+			<p>data-comparison -- 比较图片的路径</p>
+			&lt;div class="cate-list-fall"&gt;<br />
+			&nbsp;&nbsp;&lt;ul&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="item-list"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-pic"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" title="Surface 尼龙外胆包  "&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/surface-accessories1.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " <b>data-comparison="images/surface-accessories1.jpg"</b> /&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="product-comparison"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="fix-png" href="javascript:;"&gt;与其他型号进行对比&lt;/a&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="item-list"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-pic"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:;" title="Surface 尼龙外胆包  "&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/surface-accessories1.jpg" width="300px" height="180px" alt="Surface 尼龙外胆包  " <b>data-comparison="images/surface-accessories1.jpg"</b> /&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="product-comparison"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="fix-png" href="javascript:;"&gt;与其他型号进行对比&lt;/a&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&lt;/ul&gt;<br />
+			&lt;/div&gt;<br />
+			&lt;div class="comparison-box"&gt;<br />
+			&nbsp;&nbsp;&lt;h2 class="comparison-title"&gt;对比4个项目&lt;/h2&gt;<br />
+			&nbsp;&nbsp;&lt;div class="comparison-list"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="fn-clear"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-left"&gt;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-left"&gt;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-left"&gt;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-left"&gt;&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="uncom comparison-btn" href="javascript:;"&gt;开始对比&lt;/a&gt;<br />
+			&nbsp;&nbsp;&lt;/div&gt;<br />
+			&lt;/div&gt;
+		</blockquote>
+		<h2>css</h2>
+		<blockquote>
+			.cate-list-fall{<br />
+			&nbsp;&nbsp;width:940px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;padding:30px 0;<br />
+			&nbsp;&nbsp;border-top:1px solid #b9b9b9;<br />
+			&nbsp;&nbsp;border-bottom:1px solid #b9b9b9;<br />
+			}<br /><br />
+			.cate-list-fall ul{<br />
+			&nbsp;&nbsp;width:980px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			}<br /><br />
+			.cate-list-fall ul .item-list{<br />
+			&nbsp;&nbsp;display:inline-block;<br />
+			&nbsp;&nbsp;*display:inline;<br />
+			&nbsp;&nbsp;*zoom:1;<br />
+			&nbsp;&nbsp;float:none;<br />
+			&nbsp;&nbsp;width:300px;<br />
+			&nbsp;&nbsp;margin:0 20px 30px 0;<br />
+			&nbsp;&nbsp;vertical-align:top;<br />
+			}<br /><br />
+			.cate-list-fall .col-name{<br />
+			&nbsp;&nbsp;line-height:35px;<br />
+			}<br /><br />
+			.cate-list-fall .col-price1{<br />
+			&nbsp;&nbsp;font-size:35px;<br />
+			}<br /><br />
+			.product-comparison{<br />
+			&nbsp;&nbsp;width:300px;<br />
+			&nbsp;&nbsp;height:40px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;margin:10px 0 0 0;<br />
+			&nbsp;&nbsp;line-height:40px;<br />
+			}<br /><br />
+			.product-comparison a{<br />
+			&nbsp;&nbsp;display:block;<br />
+			&nbsp;&nbsp;padding:0 0 0 45px;<br />
+			&nbsp;&nbsp;font-size:14px;<br />
+			&nbsp;&nbsp;text-decoration:underline;<br />
+			&nbsp;&nbsp;background:#faf9f6 url("images/comparison-btn.png") no-repeat 10px 0;<br />
+			}<br /><br />
+			.product-comparison a.checked{<br />
+			&nbsp;&nbsp;color:#fff;<br />
+			&nbsp;&nbsp;background-position:10px bottom;background-color:#008cd3;<br />
+			}<br /><br />
+			.comparison-box{<br />
+			&nbsp;&nbsp;margin:65px auto 0;<br />
+			}<br /><br />
+			.comparison-title{<br />
+			&nbsp;&nbsp;line-height:40px;<br />
+			&nbsp;&nbsp;font-size:30px;<br />
+			&nbsp;&nbsp;color:#414141;<br />
+			}<br /><br />
+			.comparison-list{<br />
+			&nbsp;&nbsp;width:900px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;margin:10px 0 0 0;<br />
+			&nbsp;&nbsp;padding:30px 20px;<br />
+			&nbsp;&nbsp;background:#e4e4e4;<br />
+			}<br /><br />
+			.comparison-list ul{<br />
+			width:930px;<br />
+			}<br /><br />
+			.comparison-list ul li{<br />
+			&nbsp;&nbsp;position:relative;<br />
+			&nbsp;&nbsp;width:190px;<br />
+			&nbsp;&nbsp;padding:9px;<br />
+			&nbsp;&nbsp;min-height:250px;<br />
+			&nbsp;&nbsp;height:auto!important;<br />
+			&nbsp;&nbsp;_height:250px;<br />
+			&nbsp;&nbsp;margin:0 20px 0 0;<br />
+			&nbsp;&nbsp;background:#f1f1f1;<br />
+			&nbsp;&nbsp;border:1px solid #d8d8d8<br />
+			}<br /><br />
+			.comparison-list ul li.lcom{<br />
+			&nbsp;&nbsp;background:#fff;<br />
+			}<br /><br />
+			.c_pic{<br />
+			&nbsp;&nbsp;width:190px;<br />
+			&nbsp;&nbsp;height:190px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			}<br /><br />
+			.c_name{<br />
+			&nbsp;&nbsp;width:190px;<br />
+			&nbsp;&nbsp;line-height:24px;<br />
+			&nbsp;&nbsp;margin:15px 0 0 0;<br />
+			&nbsp;&nbsp;font-size:19px;<br />
+			&nbsp;&nbsp;color:#2399d7;<br />
+			&nbsp;&nbsp;text-align:center;<br />
+			}<br /><br />
+			.c_del{<br />
+			&nbsp;&nbsp;display:block;<br />
+			&nbsp;&nbsp;position:absolute;<br />
+			&nbsp;&nbsp;top:5px;<br />
+			&nbsp;&nbsp;right:5px;<br />
+			&nbsp;&nbsp;width:18px;<br />
+			&nbsp;&nbsp;height:18px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;text-indent:-99em;<br />
+			&nbsp;&nbsp;background:url("images/icon-del.png") no-repeat;<br />
+			}<br /><br />
+			.comparison-btn{<br />
+			&nbsp;&nbsp;display:block;<br />
+			&nbsp;&nbsp;width:120px;<br />
+			&nbsp;&nbsp;height:40px;<br />
+			&nbsp;&nbsp;overflow:hidden;<br />
+			&nbsp;&nbsp;margin:15px auto 0;<br />
+			&nbsp;&nbsp;line-height:40px;<br />
+			&nbsp;&nbsp;font-size:14px;<br />
+			&nbsp;&nbsp;color:#fff;<br />
+			&nbsp;&nbsp;text-align:center;<br />
+			&nbsp;&nbsp;background:#008cd3;<br />
+			}<br /><br />
+			.comparison-box .uncom{<br />
+			&nbsp;&nbsp;background:#999;<br />
+			&nbsp;&nbsp;cursor:;<br />
+			}
+		</blockquote>
+		<h2>javascript</h2>
+		<blockquote>
+			$j(function(){<br />
+			&nbsp;&nbsp;var comparison = $j(".product-comparison");<br />
+			&nbsp;&nbsp;var k = 4;<br />
+			&nbsp;&nbsp;var i = 0;<br />
+			&nbsp;&nbsp;var q = 0;<br />
+			&nbsp;&nbsp;comparison.click(function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var c_pic = $j(this).siblings(".col-pic").find("img").attr("data-comparison");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var c_name = $j(this).siblings(".col-txt").find(".col-name a").text();<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;var c_box = "&lt;div class='c_pic'&gt;&lt;img src='"+c_pic+"' width='190px' height='190px' alt='"+c_name+"' title='"+c_name+"' /&gt;&lt;/div&gt;&lt;h6 class='c_name'&gt;"+c_name+"&lt;/h6&gt;&lt;a class='fix-png c_del' href='javascript:;' title='删除'&gt;删除&lt;/a&gt;";<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;if($j(this).attr("c_id")){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var cid = $j(this).attr("c_id");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(this).removeAttr("c_id").find("a").removeClass("checked").text("与其他型号进行对比");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-list").find("li[c_id='"+cid+"']").removeClass("lcom").removeAttr("c_id").fadeOut(400,function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(this).empty().appendTo($j(this).parent()).show();<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i--;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 2个以上可以点击开始对比按钮<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($j(".comparison-list li[c_id]").length>=2){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").removeClass("uncom");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").addClass("uncom")<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i&lt;k){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(this).attr("c_id",q).find("a").addClass("checked").text("移除对比");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-list li").eq(i).addClass("lcom").attr("c_id",q).append($j(c_box));<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q++;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 2个以上可以点击开始对比按钮<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($j(".comparison-list li[c_id]").length>=2){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").removeClass("uncom");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").addClass("uncom")<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;});<br />
+			&nbsp;&nbsp;var c_del = $j(".c_del");<br />
+			&nbsp;&nbsp;c_del.live(<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;'click',function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var cid = $j(this).parent().attr("c_id");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(this).parent().removeAttr("c_id").fadeOut(400,function(){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(this).removeClass("lcom").empty().appendTo($j(this).parent()).show();<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".cate-list-fall").find(".product-comparison[c_id="+cid+"]").removeAttr("c_id").find("a").removeClass("checked").text("与其他型号进行对比");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i--;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 2个以上可以点击开始对比按钮<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($j(".comparison-list li[c_id]").length>=2){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").removeClass("uncom");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".comparison-btn").addClass("uncom")<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+			&nbsp;&nbsp;)<br />
+		})
+		</blockquote>
+	</body>
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+		$j(function(){
+			var comparison = $j(".product-comparison");
+			var k = 4;
+			var i = 0;
+			var q = 0;
+			comparison.click(function(){
+				var c_pic = $j(this).siblings(".col-pic").find("img").attr("data-comparison");
+				var c_name = $j(this).siblings(".col-txt").find(".col-name a").text();
+				var c_box = "<div class='c_pic'><img src='"+c_pic+"' width='190px' height='190px' alt='"+c_name+"' title='"+c_name+"' /></div><h6 class='c_name'>"+c_name+"</h6><a class='fix-png c_del' href='javascript:;' title='删除'>删除</a>";
+				if($j(this).attr("c_id")){
+					var cid = $j(this).attr("c_id");
+					$j(this).removeAttr("c_id").find("a").removeClass("checked").text("与其他型号进行对比");
+					$j(".comparison-list").find("li[c_id='"+cid+"']").removeClass("lcom").removeAttr("c_id").fadeOut(400,function(){
+						$j(this).empty().appendTo($j(this).parent()).show();
+					});
+					i--;
+					 // 2个以上可以点击开始对比按钮
+					 if($j(".comparison-list li[c_id]").length>=2){
+					 	$j(".comparison-btn").removeClass("uncom");
+					 }else{
+					 	$j(".comparison-btn").addClass("uncom")
+					 	return false;
+					 }			
+				}else{
+					if(i<k){
+						$j(this).attr("c_id",q).find("a").addClass("checked").text("移除对比");
+						$j(".comparison-list li").eq(i).addClass("lcom").attr("c_id",q).append($j(c_box));
+						i++;
+						q++;
+						 // 2个以上可以点击开始对比按钮
+						 if($j(".comparison-list li[c_id]").length>=2){
+						 	$j(".comparison-btn").removeClass("uncom");
+						 }else{
+						 	$j(".comparison-btn").addClass("uncom")
+						 	return false;
+						 }			
+					}
+				}
+			});
+			var c_del = $j(".c_del");
+			c_del.live(
+				'click',function(){
+					var cid = $j(this).parent().attr("c_id");
+					$j(this).parent().removeAttr("c_id").fadeOut(400,function(){
+						$j(this).removeClass("lcom").empty().appendTo($j(this).parent()).show();
+						$j(".cate-list-fall").find(".product-comparison[c_id="+cid+"]").removeAttr("c_id").find("a").removeClass("checked").text("与其他型号进行对比");
+					});
+					i--;
+					 // 2个以上可以点击开始对比按钮
+					 if($j(".comparison-list li[c_id]").length>=2){
+					 	$j(".comparison-btn").removeClass("uncom");
+					 }else{
+					 	$j(".comparison-btn").addClass("uncom")
+					 	return false;
+					 }			
+				}
+			)
+		})
+	</script>
+</html>	

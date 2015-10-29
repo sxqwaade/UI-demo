@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>tinyscrollbar</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.tinyscrollbar.min.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix(".fixpng");
+			</script>
+		<![endif]-->
+		<style type="text/css">
+		/* 这是没用过的 */
+			body{font:500 12px/1.2 'microsoft yahei';}
+			h1{height:30px;line-height:30px;margin:20px 0 20px 0;font-size:30px;text-align:center;}
+			h2{width:760px;margin:0 auto 30px;height:30px;line-height:30px;font-size:24px;}
+			blockquote{width:700px;margin:0 auto 20px;padding:30px;font-size:14px;background:#eee;color:#00a9ff}
+			p{margin:0 0 20px 0;color:#f00;}
+			b{color:#f00;font-weight:700;}
+			em{color:#000;font-weight:700;}
+			i{color:#ef07b9;font-weight:700;}
+		
+		/*  */
+			.cs-scroll{position:relative;width:620px;margin:30px auto 0;background:#fff;}
+			.cs-scroll .viewport{position:relative;width:620px;height:378px;background:#d1d1d1}
+			.cs-scroll .overview{position:absolute;left:0;top:0;width:600px;}
+			.cs-scroll .scrollbar{position:absolute;top:0;right:0;width:20px;}
+			.cs-scroll .track{position:relative;top:0;right:0;width:20px;height:378px;background:#f1f1f1;}
+			.cs-scroll .thumb{position:absolute;top:0;left:0;width:20px;background:#e45026;cursor:pointer;}
+			.cs-scroll .disable{ display: none; }
+			.noSelect{ user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+			.cart-list-li{width:100%;height:125px;line-height:125px;overflow:hidden;_margin-bottom:0px;border-bottom:1px solid #bebebe;font-size:20px;text-align:center;}
+			.cart-pinfo{width:370px;height:125px;overflow:hidden;}
+		</style>
+	</head>
+	<body>
+		<h1>自定义滚动条</h1>
+		<div class="cs-scroll cart-list-cont">
+			<div class="viewport">
+				<ul class="overview cart-list-ul">
+					<li class="fn-clear cart-list-li">1</li>
+					<li class="fn-clear cart-list-li">2</li>
+					<li class="fn-clear cart-list-li">3</li>
+					<li class="fn-clear cart-list-li">4</li>
+					<li class="fn-clear cart-list-li">5</li>
+				</ul>
+			</div>
+			<div class="scrollbar">
+				<div class="track">
+					<div class="thumb"></div>
+				</div>
+			</div>
+		</div>
+		<h2>html</h2>
+		<blockquote>
+			&lt;div class="cs-scroll cart-list-cont"&gt;<br />
+			&nbsp;&nbsp;&lt;div class="viewport"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="overview cart-list-ul"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-clear cart-list-li"&gt;1&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-clear cart-list-li"&gt;2&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-clear cart-list-li"&gt;3&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-clear cart-list-li"&gt;4&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="fn-clear cart-list-li"&gt;5&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+			&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&lt;div class="scrollbar"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="track"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="thumb"&gt;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&lt;/div&gt;<br />
+			&lt;/div&gt;<br />
+		</blockquote>
+		<h2>css</h2>
+		<blockquote>
+				.cs-scroll{<br />
+				&nbsp;&nbsp;position:relative;<br />
+				&nbsp;&nbsp;width:620px;<br />
+				&nbsp;&nbsp;margin:130px auto 0;<br />
+				&nbsp;&nbsp;background:#fff;<br />
+				}<br /><br />
+				.cs-scroll .viewport{<br />
+				&nbsp;&nbsp;position:relative;<br />
+				&nbsp;&nbsp;width:620px;<br />
+				&nbsp;&nbsp;height:378px;<br />
+				&nbsp;&nbsp;background:#d1d1d1<br />
+				}<br /><br />
+				.cs-scroll .overview{<br />
+				&nbsp;&nbsp;position:absolute;<br />
+				&nbsp;&nbsp;left:0;<br />
+				&nbsp;&nbsp;top:0;<br />
+				&nbsp;&nbsp;width:600px;<br />
+				}<br /><br />
+				.cs-scroll .scrollbar{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;position:absolute;<br />
+				&nbsp;&nbsp;top:0;<br />
+				&nbsp;&nbsp;right:0;<br />
+				&nbsp;&nbsp;width:20px;<br />
+				}<br /><br />
+				.cs-scroll .track{<br />
+				&nbsp;&nbsp;position:relative;<br />
+				&nbsp;&nbsp;top:0;<br />
+				&nbsp;&nbsp;right:0;<br />
+				&nbsp;&nbsp;width:20px;<br />
+				&nbsp;&nbsp;height:378px;<br />
+				&nbsp;&nbsp;background:#f1f1f1;<br />
+				}<br /><br />
+				.cs-scroll .thumb{<br />
+				&nbsp;&nbsp;position:absolute;<br />
+				&nbsp;&nbsp;top:0;<br />
+				&nbsp;&nbsp;left:0;<br />
+				&nbsp;&nbsp;width:20px;<br />
+				&nbsp;&nbsp;background:#e45026;<br />
+				&nbsp;&nbsp;cursor:pointer;<br />
+				}<br /><br />
+				.cs-scroll .disable{<br />
+				&nbsp;&nbsp;display: none;<br />
+				}<br /><br />
+				.noSelect{<br />
+				&nbsp;&nbsp;user-select: none;<br />
+				&nbsp;&nbsp;-o-user-select: none;<br />
+				&nbsp;&nbsp;-moz-user-select: none;<br />
+				&nbsp;&nbsp;-khtml-user-select: none;<br />
+				&nbsp;&nbsp;-webkit-user-select: none;<br />
+				}<br /><br />
+				.cart-list-li{<br />
+				&nbsp;&nbsp;width:100%;<br />
+				&nbsp;&nbsp;height:125px;<br />
+				&nbsp;&nbsp;line-height:125px;<br />
+				&nbsp;&nbsp;overflow:hidden;<br />
+				&nbsp;&nbsp;_margin-bottom:0px;<br />
+				&nbsp;&nbsp;border-bottom:1px solid #bebebe;<br />
+				&nbsp;&nbsp;font-size:20px;<br />
+				&nbsp;&nbsp;text-align:center;<br />
+				}<br /><br />
+				.cart-pinfo{<br />
+				&nbsp;&nbsp;width:370px;<br />
+				&nbsp;&nbsp;height:125px;<br />
+				&nbsp;&nbsp;overflow:hidden;<br />
+				}
+		</blockquote>
+		<h2>javascript</h2>
+		<blockquote>
+			<p>tinyscrollbar 支持手持设备。 具体看<a href="http://baijs.nl/tinyscrollbar/" target="_blank">http://baijs.nl/tinyscrollbar/</a></p>
+			<p></p>
+			<p>兼容IE6</p>
+			var $j = jQuery.noConflict();<br />
+			$j(function(){<br />
+			&nbsp;&nbsp;var cli = $j(".cart-list-li");<br />
+			&nbsp;&nbsp;if(cli.length>0){<br />
+			<i>&nbsp;&nbsp;&nbsp;&nbsp;if(jQuery.browser.msie&&jQuery.browser.version==6){<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".scrollbar").remove();<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".cart-list-ul").css({"position":"static","width":600});<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".viewport").css("overflowY","scroll");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}else{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j(".viewport").css("overflow","hidden");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//  自定义滚动条<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$j('.cs-scroll').tinyscrollbar();<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br /></i>
+			&nbsp;&nbsp;}<br />
+			})
+			<p style="margin:20px 0;">IE6下要用 红色代码换掉粉色代码</p>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp;$j(".viewport").css("overflow","hidden");<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;//  自定义滚动条<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;$j('.cs-scroll').tinyscrollbar();<br /><br /></b>
+		</blockquote>
+	</body>
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+		$j(function(){
+			var cli = $j(".cart-list-li");
+		    if(cli.length>0){
+		    	if(jQuery.browser.msie&&jQuery.browser.version==6){
+		    		$j(".scrollbar").remove();
+		    		$j(".cart-list-ul").css({"position":"static","width":600});
+		    		$j(".viewport").css("overflowY","scroll");
+		    	}else{
+		    		$j(".viewport").css("overflow","hidden");
+			    	//  自定义滚动条
+			   	 	$j('.cs-scroll').tinyscrollbar();
+			   	}
+			}
+		})
+	</script>
+</html>	

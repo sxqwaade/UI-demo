@@ -1,0 +1,142 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS实现图片翻书效果</title>
+<style type=text/css>
+	#center {
+		 left: 50%; position:absolute; top: 50%
+	}
+	#dhtmlbook{
+		background: #000; left:-210px; visibility:hidden; width:420px; position:relative; top:-160px; height:320px;
+	}
+	#txtbox{
+		font-size:0.8em; width:410px; color:#aba193; font-family:verdana; position:absolute; top:320px; text-align:center;
+	}
+	.page {
+		overflow:hidden; border-left:#000000 1px solid; width:50%; cursor:pointer; position:absolute; height:100%;
+	}
+	.right {
+		border-right:#000000 1px solid; LEFT: 50%;
+	}
+	.turn {
+		background:#000000;
+	}
+	.img {
+		width:200%; position:absolute; height:100%;
+	}
+</style>
+
+<script  type=text/javascript><!--
+
+	document.onselectstart = function () { return false; }
+	
+	var nI  = 0;
+	var kI  = 0;
+	var run = false;
+	
+	function setOpacity(obj,o) {
+		if (o<0) o=0; else if (o>100) o = 100;
+		if (obj.filters)obj.filters.alpha.opacity=o; else obj.style.opacity = o/100;
+	}
+	function TPR__(p) {
+		P1.style.left  = 50-(2.5*p)+"%";
+		P1.style.width = (2.5*p)+"%";
+		setOpacity(P1i, .5*p*p);
+		if (p == 20) run = false;
+	}
+	function TPR_(p) {
+		P2.style.width = 50-(2.5*p)+"%";
+		setOpacity(P2i, 100-.5*(p*p));
+		if (p == 20) {
+			P2i.src = IMGSRC[kI].src;
+			setOpacity(P2i, 100);
+			P2.style.width = "50%";
+			for(var i=1; i<=20; i++) setTimeout("TPR__("+i+")", i*32);
+		}
+	}
+	function TPR() {
+		if (!run) {
+			run = true;
+			P01i.src = IMGSRC[kI].src;
+			P1.style.width = 0;
+			kI++;
+			if (kI>=nI) kI = 0;
+			titLe(kI);
+			P02i.src = IMGSRC[kI].src;
+			P1i.src  = IMGSRC[kI].src;
+			for (var i=1; i<=20; i++) setTimeout("TPR_("+i+")", i*32);
+		} else setTimeout("TPR()", 100);
+	}
+	
+	function TPL__(p) {
+		P2.style.width = (2.5*p)+"%";
+		setOpacity(P2i, .5*p*p);
+		if (p == 20) run = false;
+	}
+	function TPL_(p) {
+		P1.style.left  = (2.5*p)+"%";
+		P1.style.width = 40+(10-2.5*p)+"%";
+		setOpacity(P1i, 100-.5*(p*p));
+		if (p == 20) {
+			P1i.src = IMGSRC[kI].src;
+			setOpacity(P1i, 100);
+			P1.style.left  = 0;
+			P1.style.width = "50%";
+			for(var i=1; i<=20; i++) setTimeout("TPL__("+i+")", i*32);
+		}
+	}
+	function TPL() {
+		if (!run) {
+			run = true;
+			P02i.src = IMGSRC[kI].src;
+			P2.style.width = 0;
+			kI--;
+			if (kI < 0) kI = nI-1;
+			titLe(kI);
+			P01i.src = IMGSRC[kI].src;
+			P2i.src  = IMGSRC[kI].src;
+			for(var i=1; i<=20; i++) setTimeout("TPL_("+i+")", i*32);
+		} else setTimeout("TPL()", 100);
+	}
+	function titLe(p) {
+		document.getElementById("txtbox").innerHTML = IMGSRC[p].alt;
+	}
+	onload = function() {
+		IMGSRC  = document.getElementById("imgsrc").getElementsByTagName("img");
+		DB      = document.getElementById("dhtmlbook");
+		P01     = DB.getElementsByTagName("span")[0];
+		P01i    = P01.getElementsByTagName("img")[0];
+		P02     = DB.getElementsByTagName("span")[1];
+		P02i    = P02.getElementsByTagName("img")[0];
+		P1      = DB.getElementsByTagName("span")[2];
+		P1i     = P1.getElementsByTagName("img")[0];
+		P2      = DB.getElementsByTagName("span")[3];
+		P2i     = P2.getElementsByTagName("img")[0];
+		nI      = IMGSRC.length;
+		P1i.src = IMGSRC[kI].src;
+		P2i.src = IMGSRC[kI].src;
+		titLe(kI);
+		DB.style.visibility = "visible";
+	}
+//-->
+</script>
+
+<body>
+
+    <div id=center>
+        <div id=dhtmlbook>
+        	<span class=page onMouseDown="return false;" ondblclick=TPL(); onclick=TPL();><img class=img></span>
+            <span class="page right" onMouseDown="return false;" ondblclick=TPR(); onclick=TPR();><img class=img style="left: -100%"></span>
+            <span class="page turn" onMouseDown="return false;" ondblclick=TPL(); onclick=TPL();><img class=img style="filter: alpha(); opacity: 1"></span>
+            <span class="page turn right" onMouseDown="return false;" ondblclick=TPR(); onclick=TPR();><img class=img style="filter: alpha(); left: -100%; opacity: 1"></span> 
+            <div id=txtbox></div>
+        </div>
+    </div>
+    
+    <div id=imgsrc style="visibility:hidden;">
+    <img alt="imges图说明1" src="images/1.jpg">
+    <img alt="imges图说明2" src="images/2.jpg">
+    <img alt="imges图说明3" src="images/3.jpg">
+    </div>
+</body>
+</html>

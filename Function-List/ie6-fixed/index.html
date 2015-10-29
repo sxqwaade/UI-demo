@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ie6-fixed</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.tinyscrollbar.min.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix(".fix-png");
+			</script>
+		<![endif]-->
+		<style type="text/css">
+		/* 这是没用过的 */
+			body{font:500 12px/1.2 'microsoft yahei';height:9999px;}
+			h1{height:30px;line-height:30px;margin:20px 0 20px 0;font-size:30px;text-align:center;}
+			h2{width:910px;margin:50px auto 30px;height:30px;line-height:30px;font-size:24px;}
+			blockquote{width:850px;margin:0 auto 30px;padding:30px;font-size:14px;background:#eee;color:#00a9ff}
+			p{margin:0 0 20px 0;color:#f00;}
+			b{color:#f00;font-weight:700;}
+			em{color:#000;font-weight:700;}
+			i{color:#ef07b9;font-weight:700;}
+			.w940{width:940px;margin:0 auto;}
+		
+			/*让position:fixed在IE6下可用! */
+			.fixed-top /* 头部固定 */{position:fixed;bottom:auto;top:0px;left:0;}
+			/* 上面的是除了IE6的主流浏览器通用的方法 */
+			* html,* html body /* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;}
+			* html .fixed-top /* IE6 头部固定 */{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop));}
+
+			.fixed-top{width:100%;height:30px;background:#eee;}
+			.fixed-top h1{width:300px;height:30px;line-height:30px;font-size:20px;margin:0;}
+			.fixed-top a.goTop{width:100px;height:30px;line-height:30px;font-size:12px;margin:0;}
+		</style>
+	</head>
+	<body>
+		<div class="fixed-top">
+			<div class="w940 fn-clear"><h1 class="fn-left">IE6支持 fixed 头部</h1><a class="fn-right goTop" href="javascript:;">回到头部</a></div>
+		</div>
+		<h2>html</h2>
+		<blockquote>
+			&lt;div class="fixed-top"&gt;<br />
+			&nbsp;&nbsp;&lt;div class="w940 fn-clear"&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="fn-left"&gt;IE6支持 fixed 头部&lt;/h1&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="fn-right goTop" href="javascript:;"&gt;回到头部&lt;/a&gt;<br />
+			&nbsp;&nbsp;&lt;/div&gt;<br />
+			&lt;/div&gt;<br /><br />
+		</blockquote>
+		<h2>css</h2>
+		<blockquote>
+			<p>让IE6支持 positionfixed 更多内容戳这：<a href="http://www.qianduan.net/fix-ie6-dont-support-position-fixed-bug.html" target="_blank">http://www.qianduan.net/fix-ie6-dont-support-position-fixed-bug.html</a></p>
+			.fixed-top /* 头部固定 */{<br />
+			&nbsp;&nbsp;position:fixed;<br />
+			&nbsp;&nbsp;bottom:auto;<br />
+			&nbsp;&nbsp;top:0px;<br />
+			}<br /><br />
+			/* 上面的是除了IE6的主流浏览器通用的方法 */<br />
+			* html,* html body /* 修正IE6振动bug */{<br />
+			&nbsp;&nbsp;background-image:url(about:blank);<br />
+			&nbsp;&nbsp;background-attachment:fixed;<br />
+			}<br /><br />
+			* html .fixed-top /* IE6 头部固定 */{<br />
+			&nbsp;&nbsp;position:absolute;<br />
+			&nbsp;&nbsp;bottom:auto;top:expression(eval(document.documentElement.scrollTop));<br />
+			}<br /><br />
+		</blockquote>
+		<h2>javascript</h2>
+		<blockquote>
+			<p>回到头部</p>
+			var goTop = $j(".goTop");<br />
+			goTop.click(function(){<br />
+			&nbsp;&nbsp;$j("html,body").animate({"scrollTop":0},500);<br />
+			})
+		</blockquote>
+	</body>
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+		$j(function(){
+			var goTop = $j(".goTop");
+			goTop.click(function(){
+				$j("html,body").animate({"scrollTop":0},500);
+			})
+		})
+	</script>
+</html>	

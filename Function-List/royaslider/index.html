@@ -1,0 +1,69 @@
+<! DOCUTYPE>
+<html>
+<head>
+	<link href="css/royalSlider.css" rel="stylesheet" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/royalSlider.min.js"></script>
+	<style>
+		.content{max-width:1500px;}
+		.royalSlider{width:100%;position: relative;;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var a = ($.support.opacity ? 800 : 0, Modernizr.touch ? !0 : !1),
+        	b = Modernizr.touch ? !0 : !1;
+		    jQuery.rsCSS3Easing.easeOutBack = "cubic-bezier(0.420, 0, 0.580, 1)",
+		    jQuery.rsCSS3Easing.easeInOutCubic = "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
+		    $(".box").show(),
+			$(".royalSlider").royalSlider({
+		            width: "1500px",
+		            height: "850px",
+		            allowCSS3: b,
+		            arrowsNav: !0,
+		            autoScaleSlider: !0,
+		            autoScaleSliderWidth: 1500,
+		            autoScaleSliderHeight: 850,
+		            easeInOut: "easeInOutCubic",
+		            easeOut: "linear",
+		            controlNavigation: "bullets",
+		            controlsInside: !0,
+		            imageAlignCenter: !1,
+		            keyboardNavEnabled: !0,
+		            loop: !0,
+		            minSlideOffset: 0,
+		            navigateByClick: !1,
+		            numImagesToPreload: 10,
+		            sliderDrag: a,
+		            sliderTouch: !0,
+		            slidesSpacing: 0,
+		            transitionType: "move",
+		            autoPlay: {
+		                enabled: !1,
+		                stopAtAction: !0,
+		                pauseOnHover: !0
+		            },
+		            deeplinking: {
+		                enabled: !0,
+		                prefix: "look-"
+		            },
+		            visibleNearby: {
+		                enabled: !1,
+		                centerArea: .5,
+		                center: !1,
+		                navigateByCenterClick: !1
+		            }
+		    })
+		})
+	</script>
+</head>
+<body>
+<div class="content">
+	<div class="royalSlider rsDefault">
+		<div class="box"><img width="100%" src="images/looks_1.jpg"></div>
+		<div class="box"><img width="100%" src="images/looks_2.jpg"></div>
+		<div class="box"><img width="100%" src="images/looks_3.jpg"></div>
+	</div>
+</div>
+</body>
+</html>

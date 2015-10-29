@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<title>优你购首页</title>
+
+</head>
+
+<body>
+	<div>
+   		<span>支付计时：</span>
+   		<time id="timer1">15:00</time>
+   		<script type="text/javascript">
+		/*倒计时开始*/
+		var countdownClock = document.getElementById("timer1");
+		var num = parseInt(900), timmer = null;
+			function getDigit(val, index) {
+			    if (0 == index) {
+			        if (val < 10)
+			            return 0;
+			        else
+			            return ("" + val).substring(0, 1);
+			    } else {
+			        if (val < 10)
+			            return val;
+			        else
+			            return val % 10;
+			    }
+			}
+			function changeTime(obj) {
+				//计时结束
+				if (num<=0 ){
+					clearInterval(timmer);
+					num = 0;
+					
+					 countdownClock.innerHTML = '00:00'
+					
+					return ;
+					
+				}
+				var h = Math.floor(num/60/60);
+				if (h>99) h=99;
+				var n = '';
+				for(var i=(h+'').length;i<2;i++){
+				   n+='0';
+				}
+				h = n + h;
+				var m = Math.floor(num/60%60);
+				var s =  Math.floor(num%60);
+				console.log(getDigit(m,0), getDigit(m,1))
+				countdownClock.innerHTML = getDigit(m,0)+''+getDigit(m,1)+':'+getDigit(s,0)+getDigit(s,1);
+				
+			}
+			timmer = setInterval(function(){
+				--num;
+				changeTime(countdownClock);
+			},1000); 	
+	</script>
+		    		</div>
+</body>
+</html>

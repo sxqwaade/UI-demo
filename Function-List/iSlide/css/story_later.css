@@ -1,0 +1,30 @@
+.wrap { width:1240px; height:650px; overflow:hidden; margin:0; }
+.wrap ul { padding:0; }
+.wrap ul li { list-style:none; float:left; width:1240px; }
+.section_gar { width:1240px; margin:0 auto; position:relative; }
+.at_arro_lf { background: url("../images/icn.png") no-repeat scroll 0 -440px transparent; display:block; height:96px; left:5px; position:absolute; top:255px; width:68px; cursor:pointer; }
+.at_arro_ri { background: url("../images/icn.png") no-repeat scroll 0 -321px transparent; display:block; height:96px; right:5px; position:absolute; top:255px; width:68px; cursor:pointer; }
+.at_arro_zt { background: url("../images/sprite.png") no-repeat scroll -137px -398px transparent; display:block; height:33px; left:30px; position:absolute; top:365px; width:44px; cursor:pointer; }
+.at_arro_ks { background: url("../images/sprite.png") no-repeat scroll -10px -496px transparent; display:block; height:33px; left:30px; position:absolute; top:365px; width:44px; cursor:pointer; }
+
+.nike_kv_btn {
+    clear: both;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+}
+.nike_kv_btn span {
+    background: url("../images/common.png") no-repeat scroll 0 -13px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 9px;
+    margin: 0 15px 0 0;
+    overflow: hidden;
+    width: 9px;
+}
+.nike_kv_btn .btn_select {
+    background: url("../images/common.png") no-repeat scroll 0 -4px transparent;
+}

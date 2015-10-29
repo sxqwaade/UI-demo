@@ -1,0 +1,21 @@
+body { font-family:"Microsoft YaHei UI", Helvetica, sans-serif; background-color:#022b54; margin:0; padding:0; line-height:1.231; height:100%; font-size:12px; min-width:900px; position:relative; }
+em { font-style:normal; }
+iframe.success{ height:436px; overflow:hidden; width:960px; *width:960px; border:none; margin-top:20px; }
+a:link,a:visited{color:#062649;text-decoration:none;outline:none;}
+a:hover,a:active {color:#062649;text-decoration:none !important;outline:none;}
+.blue,.blue a:link,.blue a:visited{ color:#004898; }
+.grey,.grey a:link,.grey a:visited{ color:#7c7b7b; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,img,ul,li,dl,dd,dt,a,p{ position:relative; list-style:none; margin:0; padding:0; }	
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,p,img{ display:block; }
+ul{ height:100%; }
+ul li { float:left; }
+.IE_margin_top{ *margin-top:-3px; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,a,ul,li,dl,dd,dt,p,input,iframe{ border:0; }
+.clearfix:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.clear{ clear:both; }
+.yellow { color:#f6ff00; }
+
+/* float-banner */
+.cool-guy-rule-warp { width:822px; height:271px; background-color: #02376e; margin-top:25px; }
+.cool-guy-rule { overflow: hidden; color: #fff; width: 783px; height: 233px; margin: 19px; float: left; }
+.rule-guy-main { width: 753px; }

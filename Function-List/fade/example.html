@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.imgfadesc{position:relative; width:910px; height:511px; overflow:hidden; margin:0; padding:0; background:#fff;}
+.imgfadesc li{clear:both; display:none; position:absolute; width:910px; height:511px; overflow:hidden; margin:0; padding:0; background:#fff; left:0; top:0;}
+.sq-click{clear:both; position:relative; width:910px; overflow:hidden ;margin:0; padding:10px 0 0 0; text-align:center;}
+.sq-click a:link,.sq-click a:visited{display:inline-block; width:10px; height:10px; background:#ccc; cursor:pointer; margin:0 10px 0 0 0; padding:0;}
+.sq-click a:hover{background:#000;}
+.sq-click .selected:link,.sq-click .selected:visited{background:#000;}
+</style>
+<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+<script type="text/javascript">
+$j(document).ready(function(){
+	var index=0;
+	var lengthlong=$j(".imgfadesc li").length;
+	$j(".sq-click a").click(function(){
+		var thisindex=$j(".sq-click a").index($j(this));
+		index=thisindex;
+		$j(".sq-click a").removeClass("selected");
+		$j(this).addClass("selected");
+		$j(".imgfadesc li").stop(true,true).fadeOut(400).eq(index).stop(true,true).fadeIn(400);
+	});
+	function scrollfade(){
+		if(index<lengthlong-1){
+			$j(".sq-click a").removeClass("selected").eq(index+1).addClass("selected");
+			$j(".imgfadesc li").stop(true,true).fadeOut(400).eq(index+1).stop(true,true).fadeIn(400);
+			index=index+1;
+		}
+		else{
+			index=-1;
+			$j(".sq-click a").removeClass("selected").eq(index+1).addClass("selected");
+			$j(".imgfadesc li").stop(true,true).fadeOut(400).eq(index+1).stop(true,true).fadeIn(400);
+			index=index+1;
+		}
+	}
+	var sss=setInterval(scrollfade,4000);
+	$j(".imgfadesc").mouseover(function(){clearInterval(sss);});
+	$j(".imgfadesc").mouseleave(function(){sss=setInterval(scrollfade,4000);});
+});
+</script>
+</head>
+
+<body>
+<ul class="imgfadesc">
+	<li style="display:block;"><img src="images/910-511-kop.jpg" /></li>
+    <li><img src="images/fcg-910x511.jpg" /></li>
+    <li><img src="images/wanhuatongindex.jpg" /></li>
+</ul>
+
+<div class="sq-click">
+	 <a href="javascript:void(0);" class="selected"></a>
+     <a href="javascript:void(0);"></a>
+     <a href="javascript:void(0);"></a>
+</div>
+</body>
+</html>

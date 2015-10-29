@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/jqzoom.css" type="text/css">
+<style type="text/css">
+div.notes{
+	font-size:12px;
+}
+div.notes a{
+	color:#990000;
+}
+</style>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/jqzoom.pack.1.0.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+<script type="text/javascript">
+
+$j(function() {
+	$j(".jqzoom").jqzoom();
+});
+</script>
+</head>
+
+<body>
+<div id="content" style="margin-top:100px;margin-left:100px;">
+<a href="images/kawasakigreen.jpg" class="jqzoom" style="" title="kawasaki">
+<img src="images/kawasakigreen_small.jpg"  title="kawasakigreen" style="border: 1px solid #666;"/>
+</a>
+</div>
+</body>
+</html>

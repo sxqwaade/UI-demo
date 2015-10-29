@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>图片轮播</title>
+<link rel="stylesheet" type="text/css" href="css/story_later.css" media="screen" />
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="scripts/iSlide.js"></script>
+</head>
+<body>
+<div class="section_gar" id="iSlide">
+    <div class="wrap">
+        <ul style="width:99999px;">
+            <li>
+                <img src="images/jennings.jpg" width="1240" height="650" />
+            </li>
+            <li>
+                <img src="images/jennings01.jpg" width="1240" height="650" />
+            </li>
+            <li>
+                <img src="images/jennings02.jpg" width="1240" height="650" />
+            </li>
+        </ul>
+    </div>
+    <div class="nike_kv_btn">
+	      <span class="btn_select"></span>
+	      <span class=""></span>
+	      <span class=""></span>
+	</div>
+    <a class="at_arro_lf"></a>
+    <a class="at_arro_ri"></a>
+    <a class="at_arro_zt"></a>
+</div>
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function(){
+			$('#iSlide').iSlide({
+				con: '.wrap ul'
+				, children: 'li'
+				//
+				, nav: '.nike_kv_btn span'
+				, navEvent: true
+				, addClass:'btn_select'
+				//
+				, left:'.at_arro_lf'
+				, right:'.at_arro_ri'
+				//暂停按钮
+				, stopBtn:'.at_arro_zt'
+				, stopBtnClass:'at_arro_ks'
+				
+			});
+		
+		});
+	})(jQuery);
+	</script>
+</body>
+</html>

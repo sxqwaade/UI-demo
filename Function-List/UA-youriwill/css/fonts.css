@@ -1,0 +1,44 @@
+@font-face {
+	 font-family: 'urbano_bold';
+
+	 src: url("../fonts/boldcond-webfont.eot");
+	 src: url("../fonts/boldcond-webfont.eot?#iefix") format("embedded-opentype"),
+	 url("../fonts/boldcond-webfont.woff") format("woff"),
+	 url("../fonts/boldcond-webfont.ttf") format("truetype"),
+	 url("../fonts/boldcond-webfont.svg#urbano_boldcond") format("svg");
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+@font-face {
+	 font-family: 'urbano_bold_italic';
+	 src: url("../fonts/boldconditalic-webfont.eot");
+	 src: url("../fonts/boldconditalic-webfont.eot?#iefix") format("embedded-opentype"),
+	 url("../fonts/boldconditalic-webfont.woff") format("woff"),
+	 url("../fonts/boldconditalic-webfont.ttf") format("truetype"),
+	 url("../fonts/boldconditalic-webfont.svg#urbano_boldconditalic") format("svg");
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+@font-face {
+	 font-family: 'urbano_light';
+	 src: url("../fonts/lightcond-webfont.eot");
+	 src: url("../fonts/lightcond-webfont.eot?#iefix") format("embedded-opentype"),
+	 url("../fonts/lightcond-webfont.woff") format("woff"),
+	 url("../fonts/lightcond-webfont.ttf") format("truetype"),
+	 url("../fonts/lightcond-webfont.svg#urbano_lightcond") format("svg");
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+@font-face {
+	 font-family: 'urbano_light_italic';
+	 src: url("../fonts/lightconditalic-webfont.eot");
+	 src: url("../fonts/lightconditalic-webfont.eot?#iefix") format("embedded-opentype"),
+	 url("../fonts/lightconditalic-webfont.woff") format("woff"),
+	 url("../fonts/lightconditalic-webfont.ttf") format("truetype"),
+	 url("../fonts/lightconditalic-webfont.svg#urbano_lightconditalic") format("svg");
+	 font-weight: normal;
+	 font-style: normal;
+}

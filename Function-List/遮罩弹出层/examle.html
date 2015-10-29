@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+body{height:5000px;}
+.dia1{clear:both; display:none; position:absolute; width:500px; height:500px; font-size:30px; font-weight:bold; background:#fff; color:#000; text-align:center; line-height:500px; top:100px; left:30%; z-index:9000;}
+.dia1 .close_dia{color:#ff6600; cursor:pointer;}
+.dia2{clear:both; display:none; position:absolute; width:500px; height:500px; font-size:30px; font-weight:bold; background:#fff; color:#000; text-align:center; line-height:500px; top:100px; left:30%; z-index:9000;}
+.dia2 .close_dia{color:#ff6600; cursor:pointer;}
+</style>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/opacity_dialog.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+</head>
+
+<body>
+<input type="button" value="点我弹出" class="btn" />
+<input type="button" value="点我弹出2" class="btn2" />
+
+<div class="op_dia dia1">弹出层 <span class="close_dia">点我关闭</span></div>
+<div class="op_dia dia2">弹出层2 <span class="close_dia">点我关闭</span></div>
+</body>
+
+
+<script type="text/JavaScript">
+$j(document).ready(function(){
+	$j(".btn").click(function(){op_dia(".dia1");});
+	$j(".btn2").click(function(){op_dia(".dia2");});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.9.js"></script>
+		<script type="text/javascript" src="scripts/iscroll.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix("");
+			</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			
+			var s1,s2;
+			function load1(){
+				s1 = new iScroll('wall',{
+					onBeforeScrollStart:function(e){  //屏蔽所有元素的默认事件。
+						var target = e.target;
+						while (target.nodeType != 1) target = target.parentNode;
+						if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+							e.preventDefault();	
+						}
+					}
+				});
+			}
+			function load2(){
+				s2 = new iScroll('vwall');
+			}
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			document.addEventListener('DOMContentLoaded', function () { setTimeout(load1, 200); }, false);
+			document.addEventListener('DOMContentLoaded', function () { setTimeout(load2, 200); }, false);
+
+
+			var getCookie = function(cookieName){
+			    var getC = document.cookie,reg = new RegExp(cookieName+"=([^;]*)");
+			    var val = "";
+			    if(reg.test(getC)){
+			      val = RegExp.$1;		
+			    }
+			    return val;
+			}
+
+			// 解决 ios UC 浏览器 bug
+			if(browser.versions.mobile && browser.versions.ios){
+				var sh;
+				sh=setInterval(function(){
+					var isReload = getCookie("isReload");
+					if(!isReload){
+						document.cookie = "isReload=on";
+						window.location.reload();
+					}else{
+						document.cookie = "isReload=;";	
+					}
+					clearInterval(sh);
+				},200);
+			}
+
+
+
+
+		</script>
+
+		<style type="text/css">
+			#header{position:absolute;top:0;left:0;z-index:2;width:100%;height:40px;line-height:40px;font-size:25px;color:#fff;background:#0a8fb0;}
+			#footer{position:absolute;bottom:0;z-index:2;width:100%;height:40px;line-height:40px;font-size:25px;color:#fff;background:#0a8fb0;}
+			#wall{position:absolute;top:40px;bottom:40px;left:0;z-index:1;width:100%;overflow:auto;}
+			.sub_wall{position:absolute;z-index:1;width:100%;}
+			.vscroll{position:relative;width:100%;}
+			#vwall{position:relative;z-index:1;width:100%;height:50px;overflow:auto;}
+			.sub_vwall{float:left;display:inline;width:2500px;height:100%;}
+			.sub_vwall ul{float:left;display:inline;width:100%;height:100%;}
+			.sub_vwall ul li{float:left;display:inline;width:250px;height:50px;}
+		</style>
+	</head>
+	<body>
+		<div id="header">Header</div>
+		<div id="wall">
+			<div class="sub_wall">
+				<div class="vscroll">
+					<div id="vwall" class="fn-clear">
+						<div class="fn-clear sub_vwall">
+							<ul class="fn-clear">
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+								<li><img src="images/test_img.jpg" width="250px" height="50px" /></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p><input type="text" style="width:100%;" /></p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p><select><option>123213213123</option><option>123213213123</option><option>123213213123</option><option>123213213123</option></select></p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+					<p>这是测试文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer">Footer</div>
+	</body>
+</html>	

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+.collection-sli{position:relative;}
+.abtn{float:left; width:50px; text-align:center; font-size:16px; color:#555; font-weight:bold; overflow:hidden; line-height:224px; margin:0; padding:0; cursor:pointer; text-decoration:none;}
+.moverwrap{position:relative; width:816px; overflow:hidden; height:224px; background:#fff; margin:0; padding:0; float:left;}
+.moverwrap ul{clear:both; position:absolute; left:0; top:0; margin:0; padding:0;}
+.moverwrap ul li{display:inline; width:184px; height:auto; overflow:hidden; float:left; margin:0 10px 0 10px;}
+.agrayleft{color:#ccc;}
+.agrayright{color:#ccc;}
+</style>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/ui.Xslider.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+</head>
+
+<body>
+
+<div class="collection-sli">
+<a href="javascript:void(0);" class="abtn aleft agrayleft"> < </a> <!--写上agrayleft定义靠边样式，js自动生效-->
+
+<div class="moverwrap">
+	 <ul id="hotsku_landing">
+     <li><img src="images/1235678-021_thumb.png"/></li>
+     <li><img src="images/1238126-600_thumb.png"/></li>
+     <li><img src="images/1239948-100_thumb.png"/></li>
+     <li><img src="images/1239981-731_thumb.png"/></li>
+     <li><img src="images/1240003-481_thumb.png"/></li>
+     <li><img src="images/1240462-025_thumb.png"/></li>
+     <li><img src="images/1240897-100_thumb.png"/></li>
+     </ul>
+</div>
+
+<a href="javascript:void(0);" class="abtn aright"> > </a>
+</div>
+
+
+<script type="text/JavaScript">
+$j(document).ready(function(){
+	$j("#hotsku_landing").width($j(".moverwrap ul li").length*204);//计算ul的长度 , 204为li的长度+margin的值
+	$j(".collection-sli").Xslider({ //外层包裹要滚动的层name
+		unitDisplayed : 4,
+		numtoMove : 4,
+		unitLen : 204,
+		speed : 1000
+	});
+});
+</script>
+</body>
+</html>

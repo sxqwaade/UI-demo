@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+ul{position:relative; width:50%; height:auto; margin:0 auto; padding:0;}
+ul li{display:inline; width:68px; word-break:break-all; padding:10px; margin:5px; border:1px solid #ccc; text-align:center; font-size:16px; color:#ccc; line-height:1.4; float:left; list-style-type:none;}
+</style>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.masonry.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+
+<script type="text/javascript">
+$j(document).ready(function(){
+	$j("ul").imagesLoaded( function(){
+	  $j("ul").masonry({
+		columnWidth:true,
+		itemSelector:'ul li'
+	  });
+	});
+});
+</script>
+</head>
+
+<body>
+
+<ul>
+	<li>123</li>
+    <li>1234</li>
+    <li>12345</li>
+    <li>123456</li>
+    <li>1236789</li>
+    <li>12345345234</li>
+    <li>12345</li>
+    <li>123456134345435</li>
+    <li>1234</li>
+    <li>12345</li>
+    <li>123456</li>
+    <li>1236789</li>
+    <li>12345345234</li>
+     <li>123456134345435</li>
+    <li>1234</li>
+    <li>12345</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+     <title></title>
+
+
+     <meta content="Usablenet Mobile 2.8.3" name="generator">
+     <style type="text/css"> 
+        body {background:#fff; color: #000;} 
+        a,a:visited{color:#1e4798;}
+        *{font-size:small;margin:0;} 
+        a img{border:none;} 
+        body{font-family:Verdana,sans-serif !important} 
+        a,a:visited{color:#000;text-decoration:none}
+        li{list-style-type: none;}
+
+        body,ul,li{margin:0; padding:0;}
+
+
+
+
+/*@font-face {
+     font-family:'Avenir';
+     src:url('/mt/a/coach.com/0/avenir-medium.ttf') format('truetype');
+}*/
+
+.car_box {
+     width:100%;
+     margin:0 auto;
+     text-align:center;
+}
+body[landscape] .car_box {
+     width:380px
+}
+.car_pdp_imgs img {
+     width:25%;
+}
+
+
+#car_pdpPrev {
+     position:absolute;
+     left:16.25px
+}
+#car_pdpNext {
+     position:absolute;
+     right:16.25px
+}
+#car_pdp, .car_pdp_imgs{
+    margin:0 auto;
+}
+//body[landscape] #car_pdpPrev,body[landscape] #car_pdpNext {
+     position:absolute;
+     top:400px
+}
+
+</style>
+
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+     <body>
+
+
+<div class="car_box"><div class="car_box_img">
+	<div id="car_pdp" style="overflow: hidden; position: relative; width: 255px; height: 255px;">
+		<ul class="meBelt" style="position: absolute; top: 0px; left: 0; width: 1275px;">                    					
+			<li class="meCPanel" style="float: left; width: 255px; height: 255px; ">
+					<img src="images/q1842_clo_a0.jpg" alt="" style="width: 255px; height: 255px; -webkit-transition: all 0.5s ease-out;">
+			</li>
+			<li class="meCPanel" style="float: left; width: 255px; height: 255px; ">
+					<img src="images/q1842_clo_a3.jpg" alt="" style="width: 255px; height: 255px; ">
+			</li>
+                 <li class="meCPanel" style="float: left; width: 255px; height: 255px; ">
+                           <img src="images/q1842_clo_a9.jpg" alt="" style="width: 255px; height: 255px; ">
+                 </li>
+		</ul>
+	</div>
+     <div class="flex-promtion font-color-gray">双击放大/缩小</div>
+    <div id="car_pdpPaginate" style="text-align: center; margin-top: 3px; ">
+        <img data-on="images/arrow_left.jpg" data-off="" src="images/arrow_left.jpg"
+        alt="Previous" onclick="var c=window['MECarousel_car_pdp'];c.click(-1);this.src=c.isFirst() ? _$(this).attr('data-off') : _$(this).attr('data-on');var i=_$('#car_pdpNext');i[0].src=c.isLast() ? i.attr('data-off') : i.attr('data-on');"
+        id="car_pdpPrev">
+        <img data-on="images/arrow_right.jpg" data-off=""
+        src="images/arrow_right.jpg" alt="Next" onclick="var c=window['MECarousel_car_pdp'];c.click(1);var i=_$('#car_pdpPrev');i[0].src=c.isFirst() ? i.attr('data-off') : i.attr('data-on');this.src=c.isLast() ? _$(this).attr('data-off') : _$(this).attr('data-on');"
+        id="car_pdpNext">
+    </div>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+    </script>
+    <script src="scripts/merci.js" type="text/javascript"></script>
+    <script src="scripts/merci_carousel.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	_$(document).ready(function(){
+    		var mecarouselint=setInterval(function(){
+    				
+    			var c = window['MECarousel_car_pdp'] = new MECarousel('car_pdp','meBelt','meCPanel', true, false, 1000, 5000, false, true, 3, false, true);
+
+    			c.setOrientationCallback(
+                    function (e) {
+                        var w = $j(".car_box").width();
+                        var h = w*0.2;
+                        if(e.portrait){
+                            _$("#car_pdp, #car_pdp .meCPanel, #car_pdp img").css({width: w + 'px', height: w + 'px'});
+                            _$('.car_pdp_imgs,.slidecontent').css({width: w + 'px',height: h +'px'});
+                            _$(".flex-promtion").width(w);
+                        } else {
+                            _$("#car_pdp, #car_pdp .meCPanel, #car_pdp img").css({width: (e.width - 100) + 'px', height: (e.width - 100) + 'px'});
+                            _$('.car_pdp_imgs').css({width: (e.width - 100) + 'px'});
+                        }
+                    }
+                );
+
+    			clearInterval(mecarouselint);
+    		}, 100);
+        });
+    </script>
+</div>
+	<div class="car_pdp_imgs" style="width: 255px; ">
+		<img onclick="MECarousel_car_pdp.moveTo(0)" alt="" src="images/img.jpg">
+		<img onclick="MECarousel_car_pdp.moveTo(1)" alt="" src="images/img1.jpg">
+		<img onclick="MECarousel_car_pdp.moveTo(2)" alt="" src="images/img2.jpg">
+	</div>
+</body>
+

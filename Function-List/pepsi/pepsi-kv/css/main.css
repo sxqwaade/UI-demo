@@ -1,0 +1,49 @@
+body { font-family:"Microsoft YaHei UI", Helvetica, sans-serif; background-color:#022b54; margin:0; padding:0; line-height:1.231; height:100%; font-size:12px; min-width:900px; position:relative; }
+em { font-style:normal; }
+iframe.success{ height:436px; overflow:hidden; width:960px; *width:960px; border:none; margin-top:20px; }
+a:link,a:visited{color:#062649;text-decoration:none;outline:none;}
+a:hover,a:active {color:#062649;text-decoration:none !important;outline:none;}
+.blue,.blue a:link,.blue a:visited{ color:#004898; }
+.grey,.grey a:link,.grey a:visited{ color:#7c7b7b; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,img,ul,li,dl,dd,dt,a,p{ position:relative; list-style:none; margin:0; padding:0; }	
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,p,img{ display:block; }
+ul{ height:100%; }
+ul li { float:left; }
+.IE_margin_top{ *margin-top:-3px; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,a,ul,li,dl,dd,dt,p,input,iframe{ border:0; }
+.clearfix:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.clear{ clear:both; }
+.yellow { color:#f6ff00; }
+
+/* pepsi-kv */
+.col1wrap { width:955px; height:534px; overflow:hidden; }
+.scrollingHotSpotLeft { width:57px; height:59px; background:url(http://img.pepsitmall.com/img/nowutc/arrow_left.png) no-repeat 0 0; position:absolute; z-index:2; left:0; top:230px; display:none; cursor:pointer; z-index:10; }
+.scrollingHotSpotRight { width:57px; height:59px; background:url(http://img.pepsitmall.com/img/nowutc/arrow_right.png) no-repeat 0 0; position:absolute; z-index:2; right:0; top:230px; display:none; cursor:pointer; z-index:10; }
+.scroller{ background-color:#021d35; width:955px; height:10px; position:absolute; bottom:0; left:0; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; }
+.scroller_thumb { position:relative; left:0; background-color:#3ba1d6; width:478px; height:8px; margin-top:1px; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; cursor:pointer; }
+.scroller-main { width:2000px; height:519px; overflow:hidden; left:0; }
+.module { height:519px; width:643px; margin-right:5px; float:left; }
+.pepsi-kv { width:643px; height:357px; overflow:hidden; position:relative; float:left; margin-right: 5px; }
+.pepsi-kv ul { height:357px; width:2536px; }
+.pepsi-kv ul li { height:357px; width:643px; }
+.pepsi-kv-btn { bottom:7px; height:16px; position:absolute; right:15px; z-index:4; }
+.pepsi-kv-btn span { background:url(http://img.pepsitmall.com/img/nowutc/icon.png) no-repeat scroll 0 -143px transparent; width:16px; height:16px; color:#fff; cursor:pointer; display:inline-block; float:left; line-height:16px; text-align:center; font-family:"宋体"; font-size:14px; margin-right:10px; }
+.pepsi-kv-btn .btn_select {color: red; }
+.module-banner { margin-top:5px; float:left; }
+.module-banner ul li { margin-right:5px; }
+.module01 { width:307px; height:519px; margin-right:5px; float:left; }
+.module01 ul li { margin:0 5px 5px 0; }
+.text { background:url(http://img.pepsitmall.com/img/nowutc/home-kv-con.jpg) no-repeat; width:211px; height:157px; overflow:hidden; }
+.text ul { padding:34px 10px 0; overflow:hidden; height:auto; }
+.text ul li { color:#fff; border-bottom:#0095ff solid 1px; line-height:16px; padding-bottom:5px; margin-right:0; }
+.text ul li p { height:16px; width:191px; overflow:hidden; }
+.text strong { color:#00fcff; }
+.text .text-link { text-align:right; }
+.text .text-link a { color:#fff; }
+.module02 { width:541px; height:519px; float:left; }
+.module02 ul li { margin:0 5px 5px 0; }
+.module03 { width:177px; height:519px; float:left; }
+.module03 ul li { margin:0 5px 5px 0; }
+.module04 { width:239px; height:519px; float:left; }
+.module04 ul li { margin:0 5px 5px 0; }
+.no-margin { margin-right:0 !important; }

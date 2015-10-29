@@ -1,0 +1,36 @@
+body { font-family:"Microsoft YaHei UI", Helvetica, sans-serif; background-color:#022b54; margin:0; padding:0; line-height:1.231; height:100%; font-size:12px; min-width:900px; position:relative; }
+em { font-style:normal; }
+iframe.success{ height:436px; overflow:hidden; width:960px; *width:960px; border:none; margin-top:20px; }
+a:link,a:visited{color:#062649;text-decoration:none;outline:none;}
+a:hover,a:active {color:#062649;text-decoration:none !important;outline:none;}
+.blue,.blue a:link,.blue a:visited{ color:#004898; }
+.grey,.grey a:link,.grey a:visited{ color:#7c7b7b; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,img,ul,li,dl,dd,dt,a,p{ position:relative; list-style:none; margin:0; padding:0; }	
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,p,img{ display:block; }
+ul{ height:100%; }
+ul li { float:left; }
+.IE_margin_top{ *margin-top:-3px; }
+div,article,aside,dialog,figure,footer,header,legend,nav,section,address,h1,h2,h3,a,ul,li,dl,dd,dt,p,input,iframe{ border:0; }
+.clearfix:after { clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.clear{ clear:both; }
+.yellow { color:#f6ff00; }
+
+/* content */
+.content{ margin:0 auto; position:relative; width:1190px; overflow:hidden; }
+.psihead { width:955px; height:109px; margin:0 auto; overflow:hidden; }
+.psimain { width:955px; margin:0 auto; }
+#activityLogs a{color:#062649;text-decoration:none;cursor: default;}
+#activityLogs a:link, a:hover{text-decoration:none;}
+
+.cool-snatch { width:955px; height:121px; background:url(../images/cool-snatch.jpg) no-repeat; }
+.cool-snatchbd { width:955px; height:440px; background:url(../images/cool-snatchbg.jpg) no-repeat; }
+.cool-snatchbd ul { margin:0 25px; overflow: hidden; }
+.cool-snatchbd ul li { width:175px; height:175px; margin:20px 5px 15px 0; }
+.cool-snatchbd a { width:199px; height:39px; background:url(../images/cool-home-all.png) no-repeat; border:0; cursor: pointer; position: absolute; top:-57px; right:52px; z-index: 2; }
+.cool-trade-bg { background-color: #d0c9c7; bottom:28px; left:15px; border-radius: 5px; opacity: 0.5; filter: alpha(opacity=50); -moz-opacity:0.5; font-weight: bold; width: 146px; height: 16px; overflow: hidden; text-align: center; }
+.cool-trade-shade { color: #fff; font-weight: bold; height: 16px; overflow: hidden; text-align: center; }
+.cool-com-price { color:#0f62c3; font-weight: bold; bottom:10px; left:70px; }
+.cool-com { width:175px; height:175px; background:url(../images/cool-icake.png) no-repeat; }
+.cool-com img { padding:18px; }
+.cool-com span { position: absolute; }
+.cool-com-img-shade { width: 140px; height: 140px; background: url(../images/cool-com-shade.png) no-repeat; top: 18px; left: 12px; }

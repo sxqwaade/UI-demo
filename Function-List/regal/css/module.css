@@ -1,0 +1,367 @@
+//@charset "utf-8";
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li a {
+	display:block;
+	text-indent:-999em;
+	background:url(men/men_subNav.gif) no-repeat 0 0;
+	height:22px;
+	line-height:normal;
+	padding-bottom:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li {
+	margin:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li a.nav_men01 {
+	background-position: 0 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li.active a.nav_men01 {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li a.nav_men01:hover {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li a.nav_men02 {
+	background-position: 0 -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li.active a.nav_men02 {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.men_sub li a.nav_men02:hover {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a {
+	display:block;
+	text-indent:-999em;
+	background:url(women/women_subNav.gif) no-repeat 0 0;
+	height:22px;
+	line-height:normal;
+	padding-bottom:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li {
+	margin:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women01 {
+	background-position: 0 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li.active a.nav_women01 {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women01:hover {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women02 {
+	background-position: 0 -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li.active a.nav_women02 {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women02:hover {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women03 {
+	background-position: 0 -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li.active a.nav_women03 {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women03:hover {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women04 {
+	background-position: 0 -66px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li.active a.nav_women04 {
+	background-position: -215px -66px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.women_sub li a.nav_women04:hover {
+	background-position: -215px -66px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a {
+	display:block;
+	text-indent:-999em;
+	background:url(sh/sh_subNav.gif) no-repeat 0 0;
+	height:22px;
+	line-height:normal;
+	padding-bottom:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li {
+	margin:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh01 {
+	background-position: 0 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li.active a.nav_sh01 {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh01:hover {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh02 {
+	background-position: 0 -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li.active a.nav_sh02 {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh02:hover {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh03 {
+	background-position: 0 -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li.active a.nav_sh03 {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.sh_sub li a.nav_sh03:hover {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a {
+	display:block;
+	text-indent:-999em;
+	background:url(other/other_subNav.gif) no-repeat 0 0;
+	height:22px;
+	line-height:normal;
+	padding-bottom:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li {
+	margin:0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other01 {
+	background-position: 0 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li.active a.nav_other01 {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other01:hover {
+	background-position: -215px 0;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other02 {
+	background-position: 0 -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li.active a.nav_other02 {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other02:hover {
+	background-position: -215px -22px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other03 {
+	background-position: 0 -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li.active a.nav_other03 {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other03:hover {
+	background-position: -215px -44px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other04 {
+	background-position: 0 -66px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li.active a.nav_other04 {
+	background-position: -215px -66px;
+}
+#content div.mainCon .sidebar .subnav li.active ul.other_sub li a.nav_other04:hover {
+	background-position: -215px -66px;
+}
+div.detailBox {
+	width:672px;
+	padding:15px 15px 35px 0;
+	background:url(men/men_list_bg.gif) repeat-y 0 0;
+	height:auto;
+}
+div.picShow {
+	float:left;
+	width:517px;
+}
+div.picShow p.shoeLargePic img {
+	border:6px #f3f3f3 solid;
+}
+ul.shoeDetail {
+	float:right;
+	width:140px;
+}
+ul.shoeDetail li {
+	background:transparent url(/shop/images/txt_icon.gif) no-repeat scroll 0 10px;
+	padding-left:10px;
+}
+ul.shoeDetail li.no_back {
+	background: none;
+	margin-top: 10px;
+	height: auto;
+	width: auto;
+}
+p.backButton {
+	text-align:right;
+	padding-top:20px;
+}
+div.product_button p.next {
+	float:right;
+	padding:20px 0 0 15px;
+}
+div.product_button p.pre {
+	float:right;
+	padding-top:20px;
+}
+div.product_button p.pageNum {
+	float:right;
+	padding:20px 0 0 15px;
+}
+p.infoTip {
+	color:#C00;
+}
+/* men end*/
+
+/*图片滚动特效的CSS-2012-11-1-start*/
+div.item {
+	width:100px;
+	height:50px;
+	background-color: maroon;
+	text-align:center;
+	padding-top:25px;
+}
+div.item_4 {
+	position: absolute;
+	top: 500px;
+	left: 500px;
+}
+div.item_3 {
+	position: absolute;
+	top: 0px;
+	left: 500px;
+}
+a, a:link, a:active, a:visited {
+	color: black;
+	text-decoration: underline;
+}
+a:hover {
+	color: #9E1F63;
+}
+.men_tit {
+	padding:14px 0 8px 20px;
+	margin:0 auto;
+	width:680px;
+}
+.list_carousel {
+	margin: 0px auto;
+	width:625px;
+	height:161px;
+	background:url(../images/slider_bg.jpg) no-repeat;
+	position:relative;
+	padding:23px 30px 0 30px;
+}
+.list_carousel ul {
+	margin: 0px auto;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	padding: 0;
+	display: block;
+	float: left;
+	margin:0 6px 0 7px;
+	_margin:0 3px;
+	list-style:none;
+	display:inline;
+	border:1px solid #c2c2c2;
+}
+.list_carousel li a {
+	display:block;
+	float:left;
+	height:129px;
+	width:141px;
+}
+.list_carousel.responsive {
+	width: auto;
+	margin-left: 0;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+a.prev {
+	position:absolute;
+	width:30px;
+	height:30px;
+	top:75px;
+	left:0px;
+	float: left;
+	background: url(../images/left_prev_off.gif) no-repeat;
+}
+a.prev:hover {
+	position:absolute;
+	width:30px;
+	height:30px;
+	top:75px;
+	left:0px;
+	float: left;
+	background:url(../images/left_prev_on.gif) no-repeat;
+}
+a.next {
+	position:absolute;
+	width:30px;
+	height:30px;
+	top:75px;
+	right:0px;
+	float: right;
+	background:url(../images/right_prev_off.gif) no-repeat;
+}
+a.next:hover {
+	position:absolute;
+	width:30px;
+	height:30px;
+	top:75px;
+	right:0px;
+	float: right;
+	background:url(../images/right_prev_on.gif) no-repeat;
+}
+a {
+	cursor:pointer;
+}
+.mt {
+	margin-top:40px;
+}
+/*图片滚动特效的CSS-2012-11-1-end*/
+
+/*slider CSS-2012-11-2-start*/
+.tooltip img {
+	display:block;
+}
+#tooltip {
+	position:absolute;
+	border:1px solid #c2c2c2;
+	display:none;
+	width:241px;
+	height:196px;
+}
+/*--slider CSS-2012-11-2-end--/*
+
+/*img_big_js_start*/
+div.jquery-gdakram-tooltip {
+	width: 340px;
+	color: white;
+	font-size: 12px;
+	position: absolute;
+	z-index: 10000;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+div.jquery-gdakram-tooltip div.content {
+	background-color: #FFF;
+	width: 241px;
+	min-height: 196px;
+	float: left;
+	border:1px solid #c2c2c2;
+}
+div.jquery-gdakram-tooltip div.up_arrow {
+	background : url('../images/up_arrow.gif') 110px 0px no-repeat;
+	width: 100%;
+	height: 20px;
+}
+div.jquery-gdakram-tooltip div.down_arrow {
+	background : url('../images/down_arrow.gif') 110px 0px no-repeat;
+	width: 100%;
+	height: 20px;
+}
+div.jquery-gdakram-tooltip div.left_arrow {
+	height: 100%;
+}
+/*img_big_js_end*/

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>rating</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="scripts/DD_belatedPNG.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix("");
+			</script>
+		<![endif]-->
+		<style type="text/css">
+			.rating{width:90px;height:12px;overflow:hidden;}
+			.rating ul{width:90px;height:12px;background:url("images/star-orange.png") no-repeat center -2px;}
+			.rating ul li{width:13px;height:12px;overflow:hidden;padding:0 2px 0 3px;text-indent:-99em;cursor:pointer;}
+			.rating ul.s1{background-position:center -16px;}
+			.rating ul.s2{background-position:center -30px;}
+			.rating ul.s3{background-position:center -44px;}
+			.rating ul.s4{background-position:center -58px;}
+			.rating ul.s5{background-position:center -72px;}
+			/* 这是没用过的 */
+			body{font:500 12px/1.2 'microsoft yahei';}
+			h1{height:30px;line-height:30px;margin:0 0 20px 0;font-size:30px;text-align:center;}
+			h2{width:760px;margin:0 auto 30px;height:30px;line-height:30px;font-size:24px;}
+			blockquote{width:700px;margin:0 auto 20px;padding:30px;font-size:14px;background:#eee;color:#00a9ff}
+			p{margin:0 0 20px 0;color:#f00;}
+			b{color:#f00;font-weight:700;}
+			em{color:#000;font-weight:700;}
+			i{color:#ef07b9;font-weight:700;}
+		</style>
+	</head>
+	<body>
+		<div style="width:200px;margin:30px auto">
+			<div class="rating">
+				<ul class="fn-clear" data-rating="">
+					<li class="fn-left" title="一星，差">一星，差</li>
+					<li class="fn-left" title="二星，还行">二星，还行</li>
+					<li class="fn-left" title="三星，一般">三星，一般</li>
+					<li class="fn-left" title="四星，还不错">四星，还不错</li>
+					<li class="fn-left" title="五星，很好">五星，很好</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var $j = jQuery.noConflict();
+		$j(function(){
+			var li = $j(".rating li");
+			li.bind({
+				'mouseover':function(){
+					var i = $j(this).index()+1;
+					$j(this).parent().removeClass().addClass("s"+i);
+				},
+				'mouseleave':function(){
+					var d = $j(this).parent().attr("data-rating");
+					if(d==""){
+						$j(this).parent().removeClass();
+					}else{
+						$j(this).parent().removeClass().addClass("s"+d);
+					}
+				},
+				'click':function(){
+					var i = $j(this).index()+1;
+					$j(this).parent().addClass("s"+i).attr("data-rating",i);
+				}
+			})
+		})
+	</script>
+</html>	

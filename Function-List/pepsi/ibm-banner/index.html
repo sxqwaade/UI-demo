@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿照IBM网站首页jquery banner大气焦点图小图标提示全屏滚动轮播</title>
+<meta name="description" content="仿照IBM网站首页jquery banner大气焦点图小图标提示全屏滚动轮播" />
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.tool.js"></script> 
+<script type="text/javascript" src="js/focus.js"></script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"宋体";}
+
+/* p-top */
+#p-top{margin:0 auto;padding:0 10px;width:930px;text-align:left;}
+#p-top{background:none;width:auto;min-width:990px;padding:0;}
+#p-banner-1{background: #EDEDED url(images/p-banner1.jpg) repeat-x 50% 0px;}
+#p-top-banner .p-banner-small-1{background: url(images/p-banner1-small.jpg) no-repeat 0 80%;}
+#p-banner-2{background: #EDEDED url(images/p-banner2.jpg) repeat-x 50% 0px ;}
+#p-top-banner .p-banner-small-2{background: url(images/p-banner2-small.jpg) no-repeat 0px 80%;}
+#p-banner-3{background: #EDEDED url(images/p-banner3.jpg) repeat-x 50% 0px;}
+#p-top-banner .p-banner-small-3{background: url(images/p-banner3-small.jpg) no-repeat 0px 50%;}
+.p-home-banner{width:990px;padding:0;margin:0 auto;clear:both;}
+.p-home-banner:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+#p-top-banner img,#p-top-banner h1,#p-top-banner h2,#p-top-banner h3{padding:0;margin:0;}
+#p-top-banner h1,#p-top-banner h2,#p-top-banner h3{position:relative;}
+#p-top-banner{background:#EFEFEF;border-bottom:1px solid #C0C0AE;}
+#p-top-banner.p-container{margin:0;}
+#p-top-banner.p-top-qh .p-container-body{clear:both;position:relative;height:400px;border:0 none;background:none;margin:0;}
+#p-top-banner .p-top-qh-pane{position:relative;height:400px;overflow:hidden;clear:both;}
+#p-top-banner .p-top-qh-pane h1 img,#p-top-banner .p-top-qh-pane h2 img{margin-top:80px;}
+#p-top-banner .p-bannerqh{position:absolute;overflow:hidden;}
+#p-top-banner .p-bannerqh .p-home-banner{clear:none;height:400px;overflow:hidden;width:100%;margin:0;float:left;}
+#p-top-banner .p-bannerqh .p-home-banner .p-banner1-1-1{width:990px;margin:0 auto;text-align:left}
+
+#p-top-banner .p-top-qh-nav{margin:-15px 100px 0 0;width:200px;height:20px;float:right;display:inline;}
+#p-top-banner .p-top-qh-nav a{width:45px;height:30px;position:relative;z-index:2100;display:inline-block;text-decoration:none;padding:0;margin:3px 5px;font-size:1px;outline:0;border:3px solid #EEE;border:3px solid rgba(255,255,255,0.6);box-shadow:0 1px 3px rgba(0,0,0,0.6);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);}
+#p-top-banner .p-top-qh-nav a .p-top-qh-view{width:45px;height:30px;}
+#p-top-banner .p-top-qh-nav a.p-active{top:-5px;}
+#p-top-banner .p-top-qh-nav a:hover,#p-top-banner .p-top-qh-nav a.p-active{border:3px solid #FFF;border:3px solid rgba(255,255,255,0.9);box-shadow:0 1px 3px rgba(0,0,0,0.85);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.85);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.85);}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt{display:none;background:url(images/p-banner-small-bg.png) no-repeat 0 0;_background-image:url("images/p-banner-small-bg-ie6.png");cursor:pointer;position:absolute;text-align:left;width:328px;height:113px;top:-115px;left:-237px;}
+#p-top-banner .p-top-qh-nav a.p-active .p-banner-small-alt{top:-110px;}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt span.p-banner-small-1,#p-top-banner .p-top-qh-nav a .p-banner-small-alt span.p-banner-small-2,#p-top-banner .p-top-qh-nav a .p-banner-small-alt span.p-banner-small-3{display:block;border:1px solid #FFF;width:60px;height:60px;margin:18px 10px 5px 20px;_margin:20px 6px 5px 12px;float:left;}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt h2{font-weight:bold;color:#FFDF4E;text-shadow:0 1px 0 rgba(0,0,0,.5);font-size:12px;margin:0;padding:15px 20px 0 0;}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt p{font-size:11px;color:#999;text-shadow:0 1px 0 rgba(0,0,0,.5);margin:0;padding:0 20px 5px 0;line-height:14px;}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt:hover h2{color:#FFC;}
+#p-top-banner .p-top-qh-nav a .p-banner-small-alt:hover p{color:#CCC;}
+#p-top-banner a.p-top-qh-next,#p-top-banner a.p-top-qh-prev{display:none;}
+.p-container{margin:0 0 1.2em;width:100%;}
+.p-container .p-container-body h2,.p-container.p-alternate-two h2,.p-container.p-alternate-six h2{background:none;border:none;}
+.p-subtittle{position:absolute;left:-3000px;width:500px;}
+
+.banner-buttom{position:absolute;bottom:0px;width:100%;height:30px;cursor:pointer;z-index:40;border-top:1px solid rgba(0, 0, 0, 0.1);
+margin:0 auto;min-width:990px;text-align:center;}
+.news-border{border-top:1px solid rgba(255, 255, 255, 0.3)!important;border-top:1px solid #C0C0AE;}
+</style>
+
+	<div id="p-top">
+		<div id="p-top-banner" class="p-container p-top-qh">
+			<div id="p-top-main" class="p-container-body">
+			
+				<div class="p-top-qh-pane">
+				
+					<div class="p-bannerqh">
+					
+						<div class="p-home-banner p-selected-view" id="p-banner-1">
+							<div class="p-banner1-1-1">
+								<h1><a href="#"><img src="images/p-banner1-wenzi.png" alt="" class="p-banner-wenzi" ></a></h1>
+								<p class="p-subtittle"><em>一场商业模式变革和创新的思想盛会 创新与变革 IBM 论坛2013</em></p>
+							</div>
+						</div>
+					
+						<div class="p-home-banner p-alternate" id="p-banner-2">
+							<div class="p-banner1-1-1">
+								<h2><a href="#"><img src="images/p-banner3-wenzi.png" alt="" class="p-banner-wenzi" /></a></h2>
+								<p class="p-subtittle"><em>中国企业力量 24小时探索之旅——格力集团</em></p>
+							</div>    
+						</div>
+					
+						<div class="p-home-banner" id="p-banner-3">
+							<div class="p-banner1-1-1">
+								<h2><a href="#"><img src="images/p-banner2-wenzi.png" alt="" class="p-banner-wenzi"></a></h2>
+								<p class="p-subtittle"><em>智慧的运算：未来 IT 今日就绪<span></span></em></p>
+							</div>    
+						</div>
+					
+					</div>
+			
+				</div>
+			
+			
+				<div class="banner-buttom">   
+					<div class="news-border">
+	
+						<div class="p-top-qh-nav">
+							<a class="p-active" href="#0"></a>  
+							<a href="#1"></a>  
+							<a href="#2"></a>
+						</div>
+	
+					</div>
+				</div>  
+			
+			
+			</div>
+		</div>
+	</div>
+       
+
+</body>
+</html>

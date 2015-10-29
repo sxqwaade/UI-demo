@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+.nb_banner{position:relative; width:910px; height:511px; overflow:hidden; margin:0; padding:0;}
+.cir-clk{clear:both; margin:0; padding:10px 0 0 0; width:910px; text-align:center; overflow:hidden;}
+.cir-clk a{display:inline-block; margin:0 10px 0 0; width:20px; height:20px; color:#000; background:#CCC; line-height:20px; text-align:center; text-decoration:none;}
+.cir-clk .activeSlide{background:#000; color:#fff;}
+</style>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.cycle.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+</script>
+</head>
+
+<body>
+
+<div class="nb_banner">
+	 <img src="images/wanhuatongindex.jpg" />
+     <img src="images/910-511-kop.jpg" />
+     <img src="images/fcg-910x511.jpg" />
+</div>
+<div class="cir-clk">  
+</div>  
+
+<script type="text/JavaScript">
+$j(document).ready(function() {  
+	$j('.nb_banner').cycle({
+		fx: 'scrollLeft',  
+		speed: 300,  
+		timeout: 5000,  
+		pause:1,
+		pager: '.cir-clk',  
+		pagerEvent:'click', 
+	});
+	/*   fx:'fade'》值：字符串，作用：选择特效.切换效果是它的重头戏，我统计过，jquery.cycle.js支持27种切换效果。
+    speed:300》值：正整数，作用：图片渐变效果持续时间
+    timeout:3000》值：正整数，作用：切换间隔时间
+    pause:1》值：布尔值，作用：决定鼠标指上去时是否暂停
+    next:"》值：字符串，实际是一个jquery对象，如'#s1′；作用：指定触发变动到下一张事件的元素
+    prev:''》值：同next；作用：指定触发变动到上一张事件的元素
+    pager:》值：一个jquery对象；作用：指定页码元素，如多图片滚动时那个数字序号条
+    pagerEvent:'mouseover'》值：鼠标事件；作用：指定页码触发事件
+    pauseOnPagerHover:true》值：布尔值；作用：为true时，鼠标指向页码区时暂停切换
+    before:》值：函数；作用：指定变动开始前调用的函数
+    after:》值：函数；作用：指定变动结束后调用的函数*/
+	
+	
+	/*
+    blindX:前图向右滑动渐隐，后图向左滑动渐显
+    blindX:前图向下滑动渐隐，后图向上滑动渐显
+    blindX:前图向右下滑动渐隐，后图向左上滑动渐显
+    cover:前图不动，后图从右划入覆盖前图
+    curtainX：图片被分成左右两段，前图两段向右滑动渐隐，后图两段向左滑动渐显（酷！）
+    curtainY：图片被分成上下两段，前图两段向下滑动渐隐，后图两段向上滑动渐显（酷！）
+    fade:前图渐隐，同时后图渐显
+    fadeZoom：前图渐隐，同时后图由小变大覆盖前图
+    growX：前图不动，后图宽度从0增至100%,出发点：中间
+    growY：前图不动，后图高度从0增至100%，出发点：中间
+    scrollUp：同时向上滑动至后图完全显示
+    scrollLeft：同时向左滑动至后图完全显示
+    scrollRight：同时向右滑动至后图完全显示
+    scrollDown：同时向下滑动至后图完全显示
+    scrollHorz：同Left,但手动触发时，如果触发数字小于当前，则反向滚动
+    scrollVert：同Down,但手动触发时，如果触发数字小于当前，则反向滚动
+    shuffle：前图向左下方飞出，然后飞入后图背后（酷！）
+    slideX：前图宽度由100减至0，后图宽度由0增至100%（酷！）
+    slideY：前图高度由100减至0，后图高度由0增至100%
+    toss：前图向右上方飞至消失
+    turnUp：前图不动，后图从底部向上滑入
+    turnDown：前图向下滑出，后图不动
+    turnLeft：前图不动，后图从右向左滑入
+    turnRight：前图向右滑出，后图不动
+    uncover：前图向左滑出，后图不动
+    wipe：前图不动，后图的宽和高同时由0增至100%覆盖前图，出发点：左上
+    zoom：前图缩小至0，后图由0放大至100%，出发点：中间
+	*/
+});
+</script>
+</body>
+</html>
