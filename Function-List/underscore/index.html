@@ -1,0 +1,38 @@
+<!Doctype>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>underscore demo</title>
+        <script type="text/javascript" src="../../scripts/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="test.json"></script>
+        <script type="text/javascript" src="underscore.js"></script>
+    </head>
+    <body>
+        <div class="content">            
+            <script id="template" type="text/template">
+                <div>
+                   <a href="<@= url @>" target="_blank">
+                       <div class="icon "><i>01</i></div>
+                       <div class="fl">
+                           <img width="80" height="80" src="<@= image @>" />
+                       </div>
+                       <div class="fr">
+                           <p class="title"><@= product_name @></p>
+                           <p class="price">
+                               <span class="discount-price"><i>¥</i><@= price @></span>
+                               <span class="line-through"><i>¥</i><@= original_price @></span>
+                           </p>
+                       </div>
+                   </a>
+               </div>
+            </script>
+        </div>
+
+        <script type="text/javascript">
+            var tpl = _.template($("#template").html());
+            _.each(data,function(d){
+                $(".content").append(tpl(d));
+            })
+        </script>
+    </body>
+</html>
