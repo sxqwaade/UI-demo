@@ -1,0 +1,103 @@
+@pinkColor:#ee0a3b;
+.round{
+    width: 545px;
+    height: 554px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    .round-btn{
+      position: absolute;
+      width:217px;
+      height: 217px;
+      left: 50%;
+      margin-left:-108px;
+      top: 138px;
+      z-index: 10;
+      cursor: pointer;
+      background: url("../../Function-list/round/cursor.png") no-repeat left top transparent;
+    }
+    .round-start{
+      position: absolute;
+      width:545px;
+      height: 532px;
+      left: 0;
+      top: 0px;
+      z-index: 9;
+      outline: none;
+    }
+    .round-img{
+      position: absolute;
+      width:545px;
+      height: 532px;
+      left: 0;
+      top: 0px;
+    }
+    .round-bg{
+      position: absolute;
+      width:545px;
+      height: 554px;
+      left: 0;
+      top: 0px;
+      z-index: 8;
+      background: url("../../Function-list/round/roung-bg.png") no-repeat left top transparent;
+    }
+}
+
+.activity-popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  left:0;
+  top: 0;
+  display: none;
+  .blackBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 1000;
+    background-color: #000000;
+    opacity: 0.56;
+    filter:alpha(opacity=56);
+  }
+  .popupcontent{
+    width: 540px;
+    padding: 60px 0 50px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-150px 0 0 -270px;
+    z-index: 1001;
+    background-color: #FFFFFF;
+    font-size: 30px;
+    border-radius: 30px;
+    .txt{
+      padding: 0 90px;
+      text-align: center;
+      line-height: 48px;
+    }
+    a{
+      display: block;
+      width: 455px;
+      height: 80px;
+      text-align: center;
+      margin: 10px auto 0;
+      background-color: @pinkColor;
+      color:#FFFFFF;
+      text-decoration: none;
+      line-height: 80px;
+    }
+    .close{
+      width: 68px;
+      height:68px;
+      position: absolute;
+      top: -33px;
+      right: -33px;
+      cursor: pointer;
+      z-index: 1002;
+      background: url("../../Function-list/round/close.png") no-repeat left top transparent;
+    }
+  }
+}
