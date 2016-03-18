@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo1</title>
+        <link rel="stylesheet" href="../../../dest/animationpage/demo1/contractAuthor.css" />
+        <script type="text/javascript" src="../../../scripts/jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <div class="hp-content">
+            <a href="###" target="_blank" id="firstSection" class="section " style="display: block;">
+                <div class="wrap">
+                    <div class="img1"><img width="100%" src="images/pc/group1-image1.png" /></div>
+                    <div class="img2"><img width="100%" src="images/pc/group1-image2.png" /></div>
+                </div>
+            </a>
+            <div id="secondSection" class="section toanimate">
+                <div class="wrap">
+                    <div class="title"><img alt="吸金大法" src="images/pc/group2-title.png" /></div>
+                    <div class="img1"><img width="100%" src="images/pc/group2-image1.png" /></div>
+                    <div class="img2"><img width="100%" src="images/pc/group2-image2.png" /></div>
+                    <div class="img3"><img width="100%" src="images/pc/group2-image3.png" /></div>
+                </div>
+            </div>
+            <div id="thirdSection" class="section toanimate">
+                <div class="wrap">
+                    <div class="title"><img alt="五大栏目" src="images/pc/group3-title.png" /></div>
+                    <div class="img1"><img width="100%" src="images/pc/group3-image1.png" /></div>
+                    <div class="img2"><img width="100%" src="images/pc/group3-image2.png" /></div>
+                    <ul class="btn-list clearfix">
+                        <li><a target="_blank" href="###"><img alt="装备咖" width="100%" src="images/pc/group3-btn1.png" ></a></li>
+                        <li><a target="_blank" href="###"><img alt="小潮人" width="100%" src="images/pc/group3-btn2.png" ></a></li>
+                        <li><a target="_blank" href="###"><img alt="科技宅" width="100%" src="images/pc/group3-btn1.png" ></a></li>
+                        <li><a target="_blank" href="###"><img alt="吃货世界" width="100%" src="images/pc/group3-btn2.png" ></a></li>
+                        <li style="margin-right: 0px;"><a target="_blank" href="###"><img alt="特别策划" width="100%" src="images/pc/group3-btn1.png" ></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="fourthSection" class="section toanimate">
+                <div class="wrap">
+                    <div class="title"><img alt="申请流程" src="images/pc/group4-title.png" /></div>
+                    <div class="img1"><img width="100%" src="images/pc/group4-image1.png" /></div>
+                    <div class="img2"><img width="100%" src="images/pc/group4-image2.png" /></div>
+                    <div class="img3"><img width="100%" src="images/pc/group4-image3.png" /></div>
+                    <div class="btn"><a target="_blank" href="###"><img width="100%" src="images/pc/group4-btn.png" ></a></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                var topArr = []
+                        ,heightArr = []
+                        ,length = $(".toanimate").length;
+                for(var i = 0;i < length;i++){
+                    topArr.push($(".toanimate:eq("+i+")").offset().top+110);
+                }
+
+                scrolltoAnimate();
+                $(window).scroll(scrolltoAnimate);
+                function scrolltoAnimate(){
+                    var st = $(window).scrollTop()
+                            ,wt = st+$(window).height()
+                            ,length = $(".toanimate").length;
+
+                    for(var index = 0;index < topArr.length; index++){
+                        if(wt >= topArr[index] && !$(".toanimate:eq("+index+")").hasClass("animation")){
+                            $(".toanimate:eq("+index+")").addClass("animation");
+                        }
+                    }
+
+
+                }
+            });
+        </script>
+    </body>
+</html>

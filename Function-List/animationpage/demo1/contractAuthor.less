@@ -1,0 +1,282 @@
+@base-url:"../../../Function-list/animationpage/demo1/images/pc";
+body{
+  margin: 0;
+  padding: 0;
+}
+.transition(@param){
+  -webkit-transition: @param;
+  -moz-transition: @param;
+  transition: @param;
+}
+.transform(@param){
+  -webkit-transform: @param;
+  -moz-transform: @param;
+  -ms-transform: @param;
+  -o-transform: @param;
+  transform: @param;
+}
+.linkhover(){
+  &:hover{
+    .transition(0.3s all ease-in);
+    opacity: 0.6;
+    .transform(scale(1.1));
+  }
+}
+.opacity1(){
+  opacity: 1;
+  alpha:filter('opacity=100');
+}
+.opacity0{
+  opacity: 0;
+  alpha:filter('opacity=0');
+}
+.hp-content{
+  min-width: 1080px;
+  width: 100%;
+  margin: -20px auto 0;
+  position: relative;
+  .section{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    .wrap{
+      width: 1080px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .img1,.img2,.img3{
+      position: absolute;
+    }
+    .btn{
+      position: absolute;
+      .linkhover();
+    }
+    &.animation{
+      .title{
+        .opacity1();
+        .transition(all 0.8s ease);
+        &:before{
+          .transition(all 1s ease);
+          left: -42px;
+          .opacity1();
+        }
+        &:after{
+          .transition(all 1s ease);
+          right: -39px;
+          .opacity1();
+        }
+      }
+      &#secondSection{
+        .loop-seciton2(3);
+        @sec2-left:633,732,134;
+        .loop-seciton2(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            left: extract(@sec2-left,@i)*1px;
+            .opacity1();
+            .transition(all 0.6s @i*0.4s ease);
+          }
+          .loop-seciton2(@n,(@i+1));
+        }
+      }
+      &#thirdSection{
+        .loop-seciton3(2);
+        @sec3-top:182,265;
+        .loop-seciton3(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            top: extract(@sec3-top,@i)*1px;
+            .opacity1();
+            .transition(all 0.6s @i*0.6s ease);
+          }
+          .loop-seciton3(@n,(@i+1));
+        }
+      }
+      &#fourthSection{
+        .loop-seciton4(3);
+        @sec4-left:60,255,644;
+        .loop-seciton4(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            left: extract(@sec4-left,@i)*1px;
+            .opacity1();
+            .transition(all 0.6s @i*0.6s ease);
+          }
+          .loop-seciton4(@n,(@i+1));
+        }
+      }
+    }
+    .title{
+      position: absolute;
+      .opacity0();
+      &:before{
+        content:"";
+        width: 21px;
+        height: 65px;
+        background: url("@{base-url}/title-left.png") no-repeat center top transparent;
+        position: absolute;
+        left: -72px;
+        top: 0px;
+        .opacity0();
+      }
+      &:after{
+        content:"";
+        width: 21px;
+        height: 65px;
+        background: url("@{base-url}/title-right.png") no-repeat center top transparent;
+        position: absolute;
+        right: -69px;
+        top: 0px;
+        .opacity0();
+      }
+    }
+    &#firstSection{
+      background:url("@{base-url}/group1-bg.jpg") no-repeat center top #000000;
+      height: 794px;
+      .img1{
+        width: 195px;
+        height: 104px;
+        left: 125px;
+        top:210px;
+        .animation(firstsection,5s,linear,1s,infinite,normal)
+      }
+      .img2{
+        width: 194px;
+        height: 203px;
+        left: 753px;
+        top:176px;
+        .animation(firstsection,6s,linear,1s,infinite,normal)
+      }
+    }
+    &#secondSection{
+      background:url("@{base-url}/group2-bg.jpg") no-repeat center top #000000;
+      height: 808px;
+      .title{
+        width: 248px;
+        top: 89px;
+        left: 395px;
+      }
+      .loop-seciton2(3);
+      @sec2-width:352,252,180;
+      @sec2-left:663,762,104;
+      @sec2-top:258,453,454;
+      .loop-seciton2(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec2-width,@i)*1px;
+          left: extract(@sec2-left,@i)*1px;
+          top: extract(@sec2-top,@i)*1px;
+          .opacity0();
+        }
+        .loop-seciton2(@n,(@i+1));
+      }
+    }
+    &#thirdSection{
+      background:url("@{base-url}/group3-bg.jpg") no-repeat center top #000000;
+      height: 762px;
+      .title{
+        width: 253px;
+        top: 73px;
+        left: 415px;
+      }
+      .btn-list{
+        display: block;
+        left: 38px;
+        top:611px;
+        position: absolute;
+        li{
+          float: left;
+          margin-right: 93px;
+          &:last-child{
+            margin-right: 0px;
+          }
+          .linkhover();
+        }
+      }
+      .loop-seciton3(2);
+      @sec3-width:244,1011;
+      @sec3-left:426,35;
+      @sec3-top:212,295;
+      .loop-seciton3(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec3-width,@i)*1px;
+          left: extract(@sec3-left,@i)*1px;
+          top: extract(@sec3-top,@i)*1px;
+          .opacity0();
+        }
+        .loop-seciton3(@n,(@i+1));
+      }
+    }
+    &#fourthSection{
+      background:url("@{base-url}/group4-bg.jpg") no-repeat center top #000000;
+      height: 1094px;
+      .title{
+        width: 238px;
+        top: 73px;
+        left: 415px;
+      }
+      .btn{
+        width: 238px;
+        height: 64px;
+        left: 50%;
+        top:955px;
+        margin-left: -119px;
+      }
+      .loop-seciton4(3);
+      @sec4-width:169,365,363;
+      @sec4-left:60,0,255;
+      @sec4-top:195,195,195;
+      .loop-seciton4(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec4-width,@i)*1px;
+          left: extract(@sec4-left,@i)*1px;
+          top: extract(@sec4-top,@i)*1px;
+          .opacity0();
+        }
+        .loop-seciton4(@n,(@i+1));
+      }
+    }
+  }
+}
+.animation(@animation-name,@animation-duration,@animation-timing-function,
+                @animation-delay,@animation-iteration-count,@animation-direction){
+  animation: @arguments;
+  /* Firefox: */
+  -moz-animation: @arguments;
+  /* Safari 和 Chrome: */
+  -webkit-animation: @arguments;
+  /* Opera: */
+  -o-animation: @arguments;
+}
+
+@keyframes firstsection
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-moz-keyframes firstsection /* Firefox */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-webkit-keyframes firstsection /* Safari 和 Chrome */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-o-keyframes firstsection /* Opera */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
