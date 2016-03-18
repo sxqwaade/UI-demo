@@ -1,0 +1,281 @@
+@base-url:"../../Function-list/animationpage/demo1/images/m";
+body{
+  margin: 0;
+}
+.transition(@param){
+  -webkit-transition: @param;
+  -moz-transition: @param;
+  transition: @param;
+}
+.transform(@param){
+  -webkit-transform: @param;
+  -moz-transform: @param;
+  -ms-transform: @param;
+  -o-transform: @param;
+  transform: @param;
+}
+.background-size(@param){
+  -webkit-background-size: @param;
+  background-size: @param;
+}
+.linkhover(){
+  &:hover{
+    .transition(0.3s all ease-in);
+    opacity: 0.6;
+    .transform(scale(1.1));
+  }
+}
+.opacity1(){
+  opacity: 1;
+  alpha:filter('opacity=100');
+}
+.opacity0{
+  opacity: 0;
+  alpha:filter('opacity=0');
+}
+.hp-content{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  .section{
+    position: relative;
+    width: 100%;
+    margin: -0.1rem auto 0;
+    .wrap{
+      width: 1080rem;
+      margin: 0 auto;
+      position: relative;
+    }
+    .img1,.img2,.img3,.img4,.img5,.img6{
+      position: absolute;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      background-size: contain;
+    }
+    .btn{
+      position: absolute;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      background-size: contain;
+      .background-size(contain);
+    }
+    &.animation{
+      .title{
+        .opacity1();
+        .transition(all 0.8s ease);
+        &:before{
+          .transition(all 1s ease);
+          left: -0.96rem;
+          .opacity1();
+        }
+        &:after{
+          .transition(all 1s ease);
+          right: -0.8rem;
+          .opacity1();
+        }
+      }
+      &#secondSection{
+        .loop-seciton2(4);
+        @sec2-left:3.093,1.899,1.899,1.899;
+        .loop-seciton2(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            left: extract(@sec2-left,@i)*1rem;
+            .opacity1();
+            .transition(all 0.6s @i*0.4s ease);
+          }
+          .loop-seciton2(@n,(@i+1));
+        }
+      }
+      &#thirdSection{
+        .loop-seciton3(6);
+        @sec3-top:3.733,5.419,9.515,13.76,17.856,22.123;
+        .loop-seciton3(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            top: extract(@sec3-top,@i)*1rem;
+            .opacity1();
+            .transition(all 0.4s @i*0.4s ease);
+          }
+          .loop-seciton3(@n,(@i+1));
+        }
+      }
+      &#fourthSection{
+        .loop-seciton4(3);
+        @sec4-left:1.195,5.205,10.24;
+        .loop-seciton4(@n,@i:1) when (@i <= @n){
+          .img@{i}{
+            left: extract(@sec4-left,@i)*1rem;
+            .opacity1();
+            .transition(all 0.6s @i*0.6s ease);
+          }
+          .loop-seciton4(@n,(@i+1));
+        }
+      }
+    }
+    .title{
+      position: absolute;
+      .opacity0();
+      &:before{
+        content:"";
+        width: 0.448rem;
+        height: 1.387rem;
+        background: url("@{base-url}/title-left.png") no-repeat center top transparent;
+        position: absolute;
+        left: -1.56rem;
+        top: 0rem;
+        .background-size(contain);
+        .opacity0();
+      }
+      &:after{
+        content:"";
+        width: 0.448rem;
+        height: 1.387rem;
+        background: url("@{base-url}/title-right.png") no-repeat center top transparent;
+        position: absolute;
+        right: -0.9rem;
+        top: 0rem;
+        .opacity0();
+        .background-size(contain);
+      }
+    }
+    &#firstSection{
+      background:url("@{base-url}/group1-bg.jpg") no-repeat center top #000000;
+      .background-size(contain);
+      height: 17.707rem;
+      .img1{
+        width: 3.52rem;
+        height: 1.877rem;
+        left: 0.448rem;
+        top:5.205rem;
+        .animation(firstsection,5s,linear,1s,infinite,normal)
+      }
+      .img2{
+        width: 3.157rem;
+        height: 3.328rem;
+        left: 12.459rem;
+        top:4.48rem;
+        .animation(firstsection,6s,linear,1s,infinite,normal)
+      }
+    }
+    &#secondSection{
+      background:url("@{base-url}/group2-bg.jpg") no-repeat center top #000000;
+      .background-size(contain);
+      height: 21.504rem;
+      .title{
+        width: 5.291rem;
+        top: 1.493rem;
+        left: 5.333rem;
+      }
+      .loop-seciton2(4);
+      @sec2-width:9.216,11.264,12.245,10.368;
+      @sec2-left:12.715,12.309,12.309,12.309;
+      @sec2-top:3.157,4.693,5.909,7.104;
+      .loop-seciton2(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec2-width,@i)*1rem;
+          left: extract(@sec2-left,@i)*1rem;
+          top: extract(@sec2-top,@i)*1rem;
+          .opacity0();
+        }
+        .loop-seciton2(@n,(@i+1));
+      }
+    }
+    &#thirdSection{
+      background:url("@{base-url}/group3-bg.jpg") no-repeat center top #000000;
+      .background-size(contain);
+      height: 27.328rem;
+      .title{
+        width: 5.397rem;
+        top:1.877rem;
+        left: 5.291rem;
+      }
+      .loop-seciton3(6);
+      @sec3-width:5.205,14.848,13.696,14.763,13.909,14.485;
+      @sec3-left:5.547,0,1.152,0.09,0.95,0.35;
+      @sec3-top:5.033,6.719,10.815,15.06,19.156,23.423;
+      .loop-seciton3(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec3-width,@i)*1rem;
+          left: extract(@sec3-left,@i)*1rem;
+          top: extract(@sec3-top,@i)*1rem;
+          .opacity0();
+        }
+        .loop-seciton3(@n,(@i+1));
+      }
+    }
+    &#fourthSection{
+      background:url("@{base-url}/group4-bg.jpg") no-repeat center top #000000;
+      .background-size(contain);
+      height: 25.301rem;
+      .title{
+        width: 5.077rem;
+        top: 1.771rem;
+        left: 5.461rem;
+      }
+      .btn{
+        width: 6.144rem;
+        left: 4.971rem;
+        top:22.016rem;
+      }
+      .loop-seciton4(3);
+      @sec4-width:3.435,4.629,4.587;
+      @sec4-left:0,1.195,5.205;
+      @sec4-top:4.523,4.523,4.523;
+      .loop-seciton4(@n,@i:1) when (@i <= @n){
+        .img@{i}{
+          width: extract(@sec4-width,@i)*1rem;
+          left: extract(@sec4-left,@i)*1rem;
+          top: extract(@sec4-top,@i)*1rem;
+          .opacity0();
+        }
+        .loop-seciton4(@n,(@i+1));
+      }
+    }
+  }
+}
+.animation(@animation-name,@animation-duration,@animation-timing-function,
+                @animation-delay,@animation-iteration-count,@animation-direction){
+  animation: @arguments;
+  /* Firefox: */
+  -moz-animation: @arguments;
+  /* Safari ºÍ Chrome: */
+  -webkit-animation: @arguments;
+  /* Opera: */
+  -o-animation: @arguments;
+}
+
+@keyframes firstsection
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-moz-keyframes firstsection /* Firefox */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-webkit-keyframes firstsection /* Safari ºÍ Chrome */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}
+
+@-o-keyframes firstsection /* Opera */
+{
+  0% {.transform(rotate(0deg))}
+  25% {.transform(rotate(-15deg))}
+  50% {.transform(rotate(0deg))}
+  75% {.transform(rotate(15deg))}
+  100% {.transform(rotate(0deg))}
+}

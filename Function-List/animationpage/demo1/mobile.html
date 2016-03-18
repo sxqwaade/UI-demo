@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>签约作者大赛</title>
+    <link rel="stylesheet" href="../../../dest/animation/demo1/mcontractAuthor.css" />
+    <script type="text/javascript" src="../../scripts/flexible.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+</head>
+<body>
+<div class="hp-content">
+    <div id="firstSection" class="section ">
+        <div class="wrap">
+            <div class="img1"><img width="100%" src="images/m/group1-image1.png" /></div>
+            <div class="img2"><img width="100%" src="images/m/group1-image2.png" /></div>
+        </div>
+    </div>
+    <div id="secondSection" class="section toanimate">
+        <div class="wrap">
+            <div class="title"><img width="100%" alt="吸金大法" src="images/m/group2-title.png" /></div>
+            <div class="img1"><img width="100%" src="images/m/group2-image1.png" /></div>
+            <div class="img2"><img width="100%" src="images/m/group2-image2.png" /></div>
+            <div class="img3"><img width="100%" src="images/m/group2-image3.png" /></div>
+            <div class="img4"><img width="100%" src="images/m/group2-image4.png" /></div>
+        </div>
+    </div>
+    <div id="thirdSection" class="section toanimate">
+        <div class="wrap">
+            <div class="title"><img width="100%" alt="五大栏目" src="images/m/group3-title.png" /></div>
+            <div class="img1"><img width="100%" src="images/m/group3-image1.png" /></div>
+            <div class="img2"><a href="http://m.shihuo.cn/shaiwu/detail/9100"><img alt="装备咖" width="100%" src="images/m/group3-image2.png" /></a></div>
+            <div class="img3"><a href="http://m.shihuo.cn/shaiwu/detail/9099"><img width="100%" alt="小潮人" src="images/m/group3-image3.png" /></a></div>
+            <div class="img4"><a href="http://m.shihuo.cn/shaiwu/detail/9102"><img width="100%" alt="科技宅" src="images/m/group3-image4.png" /></a></div>
+            <div class="img5"><a href="http://m.shihuo.cn/shaiwu/detail/9104"><img width="100%" alt="吃货世界" src="images/m/group3-image5.png" /></a></div>
+            <div class="img6"><a href="http://m.shihuo.cn/shaiwu/detail/9101"><img width="100%" alt="特别策划" src="images/m/group3-image6.png" /></a></div>
+        </div>
+    </div>
+    <div id="fourthSection" class="section toanimate">
+        <div class="wrap">
+            <div class="title"><img width="100%" alt="申请流程" src="images/m/group4-title.png" /></div>
+            <div class="img1"><img width="100%" src="images/m/group4-image1.png" /></div>
+            <div class="img2"><img width="100%" src="images/m/group4-image2.png" /></div>
+            <div class="img3"><img width="100%" src="images/m/group4-image3.png" /></div>
+            <div class="btn"><a href="http://m.shihuo.cn/shaiwu"><img width="100%" src="images/m/group4-btn.png" ></a></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        var topArr = []
+                ,heightArr = []
+                ,length = $(".toanimate").length;
+        for(var i = 0;i < length;i++){
+            topArr.push($(".toanimate").eq(i).offset().top+110);
+        }
+
+        scrolltoAnimate();
+        $(window).scroll(scrolltoAnimate);
+        function scrolltoAnimate(){
+            var st = $(window).scrollTop()
+                    ,wt = st+$(window).height()
+                    ,length = $(".toanimate").length;
+
+            for(var index = 0;index < topArr.length; index++){
+                if(wt >= topArr[index] && !$(".toanimate").eq(index).hasClass("animation")){
+                    $(".toanimate").eq(index).addClass("animation");
+                }
+            }
+
+
+        }
+    });
+</script>
