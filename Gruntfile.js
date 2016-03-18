@@ -35,7 +35,7 @@ module.exports = function(grunt) {
               },
               expand: true,
               cwd: '<%= dirs.demolist %>/',
-              src: ['*/*.less'],
+              src: ['*/*.less','*/*/*.less'],
               dest:'dest/',
               ext: '.css'
           }
