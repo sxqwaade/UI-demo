@@ -1,4 +1,5 @@
 .idea
 .svn
-.gitignore  
+.gitignore
+.sass-cache
 node_modules
