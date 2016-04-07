@@ -1,0 +1,128 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+.icon-0 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 0;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.48438rem;
+  width: 0.54688rem; }
+
+.icon-1 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -0.70313rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.35938rem;
+  width: 0.53125rem; }
+
+.icon-2 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -1.39063rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.48438rem;
+  width: 0.54688rem; }
+
+.icon-3 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -2.09375rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.46875rem;
+  width: 0.54688rem; }
+
+.icon-4 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -2.79688rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.51563rem;
+  width: 0.54688rem; }
+
+.icon-5 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -3.5rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.51563rem;
+  width: 0.54688rem; }
+
+.icon-6 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -4.20313rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.48438rem;
+  width: 0.54688rem; }
+
+.icon-7 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -4.90625rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.45313rem;
+  width: 0.53125rem; }
+
+.icon-8 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -5.59375rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.48438rem;
+  width: 0.54688rem; }
+
+.icon-9 {
+  background-repeat: no-repeat;
+  background-image: url('../../Function-List/remSprites/images-sb970da5922.png');
+  background-position: 0 -6.29688rem;
+  background-size: 0.51563rem 6.84375rem;
+  height: 0.48438rem;
+  width: 0.54688rem; }
+
+/*# sourceMappingURL=remSprites.css.map */

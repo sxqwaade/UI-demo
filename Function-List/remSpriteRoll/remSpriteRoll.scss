@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import '../../sass/sassCore/base';
+@import '../../sass/sassCore/core/reset';
+$img-path:"../../Function-List/remSpriteRoll/images";
+.amount {
+  width: pxToRem(600);
+  position: absolute;
+  top: pxToRem(630);
+  left: pxToRem(130);
+  text-align: center;
+  &.transition li {
+    @include transition(all 0.6s ease);
+  }
+  li {
+    height: pxToRem(105); //目标图片高度
+    width: pxToRem(60); //目标图片宽度
+    background-image: url("#{$img-path}/num.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: auto pxToRem(1050);
+    &.punctuation {
+      width: pxToRem(37);
+      background-size: auto pxToRem(105);
+      background-image: url("#{$img-path}/punctuation.png");
+    }
+  }
+  @for $i from 0 through 9 {
+    .n#{$i} {
+      background-position: 0 -1*pxToRem(105)*$i;
+    }
+  }
+}

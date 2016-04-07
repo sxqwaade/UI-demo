@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>rem sprites</title>
+        <link rel="stylesheet" href="../../dest/remSpriteRoll/remSpriteRoll.css"/>
+    </head>
+    <body>
+    <div class="amount">
+        <ul>
+            <li id="p6" class="n0"></li>
+            <li id="p5" class="n0" ></li>
+            <li id="p4" class="n0"></li>
+            <li id="p3" class="n0"></li>
+            <li id="p2" class="n0"></li>
+            <li class="punctuation"></li>
+            <li id="p1" class="n0"></li>
+            <li id="p0" class="n0"></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../../scripts/flexible.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript">
+        ("undefined" == typeof window.localStorage.betting_end ) && (window.localStorage.betting_end = 1);
+        $(function(){
+            var realAmount = '13140.13';
+            if("undefined" == typeof window.localStorage.original_amount){
+                window.localStorage.original_amount = realAmount;
+            }
+            if(window.localStorage.betting_end == "false"){
+                if(realAmount > window.localStorage.betting){
+                    var newAmount =  realAmount - 10;
+                    window.localStorage.betting_end = 1;
+                }else{
+                    var newAmount =  Number(window.localStorage.original_amount);
+                }
+            }else{
+                if("undefined" !=  typeof window.localStorage.betting){
+                    var newAmount = Number(window.localStorage.betting);
+                }else{
+                    var newAmount =  realAmount - 10;
+                }
+            }
+            $(".amount").addClass("transition");
+            bettingHandle(newAmount);
+
+            function bettingHandle(num){
+                var betting_num = num.toFixed(2).replace(".","").split("");
+
+                for(var i =0;i<betting_num.length;i++){
+                    var s = betting_num.length- 1 - i;
+
+                    $("#p"+i).attr("class","n"+betting_num[s]);
+                }
+                if(num >= realAmount){
+                    window.localStorage.betting_end = !1;
+                    window.localStorage.original_amount = num.toFixed(2);
+                    return false
+                }
+                setTimeout(function(){
+                    num = num.add(0.01);
+                    window.localStorage.betting = num.toFixed(2);
+                    bettingHandle(num);
+                },1000);
+            }
+        });
+        Number.prototype.add = function(arg){
+            var r1,r2,m;
+            try{r1=this.toString().split(".")[1].length}catch(e){r1=0}
+            try{r2=arg.toString().split(".")[1].length}catch(e){r2=0}
+            m=Math.pow(10,Math.max(r1,r2))
+            return (this*m+arg*m)/m
+        };
+    </script>
+    </body>
+</html>
